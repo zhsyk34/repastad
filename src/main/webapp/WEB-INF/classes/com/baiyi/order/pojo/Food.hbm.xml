@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.baiyi.order.pojo.Food" table="food" lazy="false">
+		<id name="id" type="java.lang.Integer" unsaved-value="0">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="name" />
+		</property>
+		<property name="alias" type="java.lang.String">
+			<column name="alias" />
+		</property>
+		<property name="shortname" type="java.lang.String">
+			<column name="shortname" />
+		</property>
+		<property name="necessary" type="java.lang.String">
+			<column name="necessary" />
+		</property>
+		<property name="price" type="java.lang.Float">
+			<column name="price" />
+		</property>
+		<property name="type" type="java.lang.Integer">
+			<column name="type" />
+		</property>
+		<property name="materialId" type="java.lang.Integer">
+			<column name="materialId" />
+		</property>
+		<property name="introduce" type="java.lang.String">
+			<column name="introduce" />
+		</property>
+		<property name="taste" type="text">
+			<column name="taste" />
+		</property>
+		<property name="adminId" type="java.lang.Integer">
+			<column name="adminId" />
+		</property>
+		<property name="addtime" type="java.util.Date">
+			<column name="addtime" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

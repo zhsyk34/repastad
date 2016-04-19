@@ -1,0 +1,232 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, input, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, select, table, th, tr, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: PMingLiU,"宋体",Tahoma,sans-serif,Helvetica,Georgia,Arial,Verdana;
+}
+ul{
+	list-style:none;
+}
+img {
+    border: 0 none;
+    vertical-align: top;
+}
+a:link,a:visited,a:active,a{
+	text-decoration:none;
+}
+/*global*/
+html,body {
+	width: 100%;
+    height: 100%;
+    background-color: #FF9DBC;
+}
+#wrapper{
+	width: 1024px;
+    height: 768px;
+    background: url("../images/wed-login_bg.jpg") no-repeat left top;
+    margin: 0 auto;
+}
+/*index*/
+.index{
+	padding: 267px 0 0 416px;
+}
+.input{
+	float: left;
+	width: 204px;
+}
+.input input{
+	width: 200px;
+	height: 28px;
+	line-height: 28px;
+	padding: 1px 2px;
+	margin-bottom: 27px;
+	*margin-bottom: 24px;
+	font-size: 13px;
+}
+.login{
+	float: left;
+	width: 107px;
+	height: 103px;
+	margin: -4px 0 0 13px;
+	*margin-top: -3px;
+}
+/*page2*/
+#wrap2{
+	width: 100%;
+	height: 100%;
+	background: #FDDCE5 url("../images/wed-page2_bg2.jpg") repeat-x bottom left
+}
+#wrap2 .main{
+	width: 1004px;
+	height: 94%;
+	margin: 0 auto;
+	padding-top: 4%;
+}
+.main .content_bg{
+	background: #FDE6EE url("../images/wed-page2_bg.jpg") no-repeat top left;
+}
+.main .content{
+	min-height: 748px;
+	background: url("../images/wed-page2_bg3.png") no-repeat bottom left;
+	padding-left: 40px;
+	margin-bottom: 10px;
+}
+.content .title{
+	height: 64px;
+	line-height: 64px;
+	margin-bottom: 26px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #BB1F72;
+	padding-left: 22px;
+}
+.title span{
+	background-color: #FDE6EE;
+	padding-right: 4px;
+}
+.content .preview{
+	width: 360px;
+	height: 477px;
+	margin-right: 40px;
+	float: left;
+	background-color: #780419;
+	position: relative;
+	overflow: hidden;
+}
+.content .relation{
+	float: left;
+	width: 560px;
+}
+.relation ul li{
+	line-height: 21px;
+	margin-bottom: 9px;
+}
+.relation ul li span{
+	display: inline-block;
+	min-width: 52px;
+	max-width: 106px;
+	line-height: 21px;
+	background-color: #FC9FD8;
+	color: #3A3134;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	margin-right: 16px;
+	padding: 0 4px;
+	word-wrap:break-word;
+	vertical-align: middle;
+}
+.relation ul li select{
+	margin-right: 10px;
+	vertical-align: middle;
+	width: 90px;
+}
+.relation ul li input{
+	width: 147px;
+	height: 18px;
+	margin-right: 10px;
+	border: 1px solid #728DE4;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 1px 2px;
+	vertical-align: middle;
+}
+.relation ul li img{
+	vertical-align: middle;
+}
+.content .button{
+	clear:both;
+	height: 27px;
+	text-align: center;
+	padding: 14px 0 30px 340px;
+}
+.button input{
+	margin-right: 50px;
+}
+/*page2*/
+#wrap3{
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+}
+#wrap3 .main{
+	width: 965px;
+	height: 94%;
+	margin: 0 auto;
+	padding-top: 4%;
+}
+.main .title2{
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #BB1F72;
+	padding: 1px 0 0 52px;
+	background: url("../images/wed-page3_title.jpg") no-repeat top left;
+}
+.title2 span{
+	background-color: #FFF;
+	padding-right: 4px;
+}
+.main .guests{
+	width: 935px;
+	margin: 14px auto 0;
+}
+.guests table{
+	border-collapse: collapse;
+}
+.guests table th{
+	height: 33px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #FFE5A0;
+	border-right: 1px solid #FFF;
+}
+.guests table td{
+	height: 32px;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	border-right: 1px solid #FFF;
+	background-color: #FEFBE8;
+}
+.guests table tr.hl td{
+	background-color: #FFF2DF;
+}
+.guests table td input{
+	width: 147px;
+	height: 16px;
+	border: 1px solid #728DE4;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 1px 2px;
+}
+.guests table td select{
+	margin-right: 10px;
+}
+.main .button2{
+	text-align: center;
+	padding: 30px 0;
+}
+.main .button2 input{
+	margin-right: 20px;
+}
+
+/*wedding make*/
+
+.articleText{
+	background:url('../images/wed-opacity.png');
+	text-align: center;
+	overflow: hidden;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-family: Arial;
+}
+.imgarticle{
+	width:100%;
+	height:100%;
+}

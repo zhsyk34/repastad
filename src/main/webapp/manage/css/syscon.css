@@ -1,0 +1,56 @@
+.table td img {
+	width: 350px;
+	height: 36px;
+}
+
+.table td input.form {
+	width: 50px;
+	padding: 1px;
+	text-align: center;
+	height: 24px;
+	border-radius: 0;
+}
+
+.separator {
+	display: inline-block;
+	width: 12px;
+	height: 1px;
+	margin-bottom: 5px;
+	background-color: #2269A7;
+}
+
+.table td ul {
+	clear: both;
+}
+
+.table td li {
+	padding: 8px 0;
+	float: left;
+	margin-right: 10px;
+}
+
+.table td li span {
+	display: inline-block;
+	width: 40px;
+	text-align: center;
+	font-family: Arial, serif;
+}
+
+.emphasis {
+	font-weight: 700;
+	color: #f00;
+}
+
+.accessory  div+div,.wechat  div+div,.alipay  div+div {
+	margin-top: 8px;
+}
+
+.accessory td input[type="text"] {
+	width: 100px;
+	padding: 2px 5px;
+}
+
+.wechat td span,.alipay td span {
+	display: inline-block;
+	width: 120px;
+}

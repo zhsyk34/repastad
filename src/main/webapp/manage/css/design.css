@@ -1,0 +1,155 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+	body{
+    	width: 100%;
+    	margin: 0;
+    	padding: 0;
+    	text-align: center;
+    	font-size: 12px;
+    }
+    /*整個頁面*/
+    #design{
+    	width: 99%;
+    	min-height:100%;
+    	margin: 5px auto;
+    	padding: 0;
+    	position: relative;
+    }
+    /*素材選擇樣式*/
+   	#design li{
+    	list-style-type:none;
+    	float: left;
+    	overflow: hidden;
+    }
+    .liCSS{
+    	width: 102px;
+    	height: 102px;
+    	border: 1px solid black;
+    	margin-right:2px;
+    	margin-bottom:2px;
+    }
+    .liCSS div{
+    	width: 101px;
+    	height:100px;
+    	position: relative;
+    }
+    .liCSS i{
+		display:inline-block;
+		height:100%;
+		vertical-align: middle;
+	}
+	.liCSS img{
+		vertical-align: middle; 
+	}
+	/*保存素材*/
+    #saveart{
+   		width: 100px;
+    	height: 100px;
+    	padding-top: 10px;
+    	line-height: 30px;
+    }
+    /*模板預覽*/
+    #litemplateLi{
+    	-moz-user-select: none;
+    	margin-right:2px;
+    	border: 1px solid black;
+    	width:360px;
+    	height:640px;
+    	background: rgb(221, 211, 211);
+    	margin-bottom:1px;
+    	position: relative;
+    }
+    #litemplateDiv div{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+   	}
+    .fullSize{
+    	width:100%;
+    	height:100%;
+    }
+    /*配置和內容*/
+    #liconfig{
+    	margin-right:2px;
+    	border: 1px solid black;
+    	line-height:25px;
+    	text-align: left;
+    	margin-bottom:2px;
+    }
+    /*右上角刪除標誌*/
+    .deleteArticle{
+    	width:22px;
+    	height:22px;
+    	position:absolute;
+    	right:0;
+    	top:0;
+    	display: none;
+    }
+    /*物件預覽區*/
+    #previewDiv{
+    	width:100px;height:100px;
+    	position: absolute;left: 0;top: 0;
+    	border: 1px black dashed;
+    	display: none; 
+    }
+    /*透明div,移動時*/
+    .articleOver{
+    	background:url('images/wed-opacity.png');
+		overflow: hidden;
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0px;
+		top:0px;
+    }
+    /*刪除物件按鈕*/
+    #deleteArtBtn{
+    	display: none;
+    	margin-left: 15px;
+    }
+    /*模板背景*/
+	#templatebg{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		text-align: left;
+	}
+	 /*放大縮小的點*/
+	.resizeDiv{
+		width: 4px;
+		height: 4px;
+		background:#000;
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 4px;
+	}
+	.resizeL{
+		cursor: w-resize;
+	}
+	.resizeT{
+		cursor: n-resize;
+	}
+	.resizeR{
+		cursor: e-resize;
+	}
+	.resizeB{
+		cursor: s-resize;
+	}
+	.resizeLT{
+		cursor: nw-resize;
+	}
+	.resizeLB{
+		cursor: sw-resize;
+	}
+	.resizeRT{
+		cursor: ne-resize;
+	}
+	.resizeRB{
+		cursor: se-resize;
+	}

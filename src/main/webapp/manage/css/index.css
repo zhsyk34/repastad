@@ -1,0 +1,194 @@
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #63C6FF;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+iframe {
+	width: 100%;;
+	height: 100%;
+	background: #F0F5FB;
+}
+
+#index {
+	position: relative;
+	width: 99%;
+	height: 100%;
+	margin: 0 auto;
+	-moz-user-select: none;
+}
+
+/*header*/
+#header {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: url(../../sysimg/index/head.jpg) repeat-x;
+}
+
+#leftHead {
+	position: absolute;
+	left: 0;
+	width: 467px;
+	height: 100%;
+}
+
+#indexLogo {
+	width: 100%;
+	height: 100%;
+}
+
+#rightHead {
+	position: absolute;
+	left: 467px;
+	right: 0;
+	height: 100%;
+	background: url(../../sysimg/index/head_right.jpg) no-repeat 100% 0;
+}
+
+#rightHead ul {
+	float: right;
+	height: 100%;
+}
+
+#rightHead li {
+	display: inline-block;
+	padding: 10px 20px 10px 0;
+}
+
+#rightHead li img {
+	height: 28px;
+	cursor: pointer;
+}
+
+#rightHead li img:hover {
+	background: #8EDDCC;
+}
+
+/*body*/
+#container {
+	width: 100%;
+	clear: both;
+	position: absolute;
+	top: 50px;
+	bottom: 29px;
+	background: #d0f9ff;
+}
+
+#leftCon {
+	position: absolute;
+	left: 0;
+	width: 160px;
+	height: 100%;
+	border: 1px solid #4E9DBB;
+}
+
+#accordionWrap {
+	position: absolute;
+	top: 36px;
+	bottom: 0;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#welcome {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+	background: url(../../sysimg/index/tab.jpg) repeat-x;;
+	font-weight: 600;
+}
+
+#welcome span {
+	color: #812513;
+}
+
+#rightCon {
+	position: absolute;
+	height: 100%;
+	left: 165px;
+	right: 0;
+	border: 1px solid #4E9DBB;
+}
+
+/*footer*/
+#footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid #4E9DBB;
+	height: 27px;
+	line-height: 27px;
+	color: #4E4D55;
+	font-size: 13px;
+	background: url(../../sysimg/index/foot.jpg) repeat-x;
+}
+
+#date {
+	float: right;
+	margin-right: 15px;
+}
+
+#version {
+	float: left;
+	margin-left: 15px;
+}
+
+#serverId {
+	float: left;
+	margin-left: 40px;
+}
+
+.tab_head {
+	background: url(../../sysimg/index/tab.jpg) repeat-x;
+}
+
+/*修改accordion样式*/
+.accordion {
+	width: 100%;
+	text-align: left;
+	vertical-align: middle;
+	cursor: pointer;	
+}
+
+.accordion p,.accordion li {
+	padding: 1px 0 1px 28px;
+	font-family: PMingLiU;
+}
+
+.accordion p {
+	background: #0A5789;
+	color: #fff;
+	line-height: 28px;
+	font-size: 15px;
+	letter-spacing: 5px;
+	margin-bottom: 1px;
+}
+
+.accordion li {
+	color: #04142C;
+	height: 24px;
+	letter-spacing: 2px;
+	line-height: 24px;
+	font-size: 13px;
+}
+
+.accordion li:hover {
+	background: #A1F0F3;
+	/*font-size: 14px;letter-spacing: 3px;*/
+}
+
+.accordion li.active {
+	background: #80D8CF;
+	color: #06081B;
+	font-weight: 600;
+	letter-spacing: 3px;
+}

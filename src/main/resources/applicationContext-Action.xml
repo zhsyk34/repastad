@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+           http://www.springframework.org/schema/context   
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd   
+           http://www.springframework.org/schema/aop   
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd   
+           http://www.springframework.org/schema/tx   
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<!-- 登录Action -->
+	<bean id="adminsAction" class="com.baiyi.order.action.AdminsAction" scope="prototype">
+		<property name="adminsService" ref="adminsService"></property>
+	</bean>
+	<bean id="materialAction" class="com.baiyi.order.action.MaterialAction" scope="prototype">
+		<property name="materialService" ref="materialService"></property>
+		<property name="adminsService" ref="adminsService"></property>
+	</bean>
+	<bean id="foodAction" class="com.baiyi.order.action.FoodAction" scope="prototype">
+		<property name="foodService" ref="foodService"></property>
+		<property name="adminsService" ref="adminsService"></property>
+		<property name="materialService" ref="materialService"></property>
+		<property name="foodTypeService" ref="foodTypeService"></property>
+		<property name="tasteService" ref="tasteService"></property>
+	</bean>
+	<bean id="marqueeAction" class="com.baiyi.order.action.MarqueeAction" scope="prototype">
+		<property name="marqueeService" ref="marqueeService"></property>
+		<property name="adminsService" ref="adminsService"></property>
+		<property name="materialService" ref="materialService"></property>
+	</bean>
+	<bean id="templateAction" class="com.baiyi.order.action.TemplateAction" scope="prototype">
+		<property name="foodService" ref="foodService"></property>
+		<property name="adminsService" ref="adminsService"></property>
+		<property name="materialService" ref="materialService"></property>
+		<property name="templateService" ref="templateService"></property>
+		<property name="marqueeService" ref="marqueeService"></property>
+	</bean>
+	<bean id="terminalAction" class="com.baiyi.order.action.TerminalAction" scope="prototype">
+		<property name="adminsService" ref="adminsService"></property>
+		<property name="terminalService" ref="terminalService"></property>
+		<property name="templateService" ref="templateService"></property>
+	</bean>
+	<bean id="detectrecordsAction" class="com.baiyi.order.action.DetectrecordsAction" scope="prototype">
+		<property name="adminsService" ref="adminsService"></property>
+		<property name="iDetectrecordsService" ref="iDetectrecordsService"></property>
+	</bean>
+	<bean id="downRecordAction" class="com.baiyi.order.action.DownRecordAction" scope="prototype">
+		<property name="downRecordService" ref="downRecordService"></property>
+		<property name="templateService" ref="templateService"></property>
+		<property name="materialService" ref="materialService"></property>
+		<property name="foodService" ref="foodService"></property>
+		<property name="marqueeService" ref="marqueeService"></property>
+		<property name="foodTypeService" ref="foodTypeService"></property>
+		<property name="tasteService" ref="tasteService"></property>
+	</bean>
+	<bean id="orderRuleAction" class="com.baiyi.order.action.OrderRuleAction" scope="prototype">
+	</bean>
+	<bean id="orderAction" class="com.baiyi.order.action.OrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"></property>
+		<property name="adminsService" ref="adminsService"></property>
+	</bean>
+</beans>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.action.extension" value="do" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+	<!-- 上传文件大小b size/1024/1024=MB  256MB -->
+	<constant name="struts.multipart.maxSize" value="268435456" />
+	<constant name="struts.custom.i18n.resources" value="messageResource" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+
+
+	<!-- 權限攔截包,其它包可通過繼承使用 -->
+	<package name="visitOauth" extends="json-default" abstract="true">
+		<!-- 定義權限攔截器 -->
+		<interceptors>
+			<!-- 自定義攔截器 -->
+			<interceptor name="oauthInterceptor" class="com.baiyi.order.interceptor.OauthInterceptor" />
+			<interceptor-stack name="visitInterceptorStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="oauthInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 啓用自定義攔截器爲默認 -->
+		<default-interceptor-ref name="visitInterceptorStack" />
+
+		<!-- 訪問驗證===>被攔截后的跳轉地址 -->
+		<global-results>
+			<result name="unauthorized">/warning.jsp</result>
+		</global-results>
+	</package>
+
+	<package name="user" extends="struts-default">
+		<action name="login" class="adminsAction" method="login">
+			<result type="redirect">/manage/index.jsp</result>
+			<result name="input">/login/login.jsp</result>
+		</action>
+		<action name="logout" class="adminsAction" method="logout">
+			<result type="redirect">/login/login.jsp</result>
+		</action>
+	</package>
+
+
+
+	<package name="manage" extends="visitOauth">
+		<!-- 退幣異常處理 -->
+		<action name="refundList" class="com.baiyi.order.action.RefundWrongAction" method="list">
+			<result>/manage/refundWrong.jsp</result>
+		</action>
+		<action name="refundMod" class="com.baiyi.order.action.RefundWrongAction" method="mod">
+			<result type="redirectAction">refundList</result>
+		</action>
+		<!-- table manage -->
+		<action name="tableFind" class="com.baiyi.order.action.DinnerTableAction" method="find">
+			<result>/manage/dinnerTable.jsp</result>
+		</action>
+		<action name="tablePre" class="com.baiyi.order.action.DinnerTableAction" method="pre">
+			<result>/manage/dinnerTableEdit.jsp</result>
+		</action>
+		<action name="tableMerge" class="com.baiyi.order.action.DinnerTableAction" method="merge">
+			<result type="redirectAction">
+				<param name="actionName">tableFind</param>
+				<param name="message">${message}</param>
+				<param name="pageNo">${pageNo}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+		</action>
+		<action name="tableDelete" class="com.baiyi.order.action.DinnerTableAction" method="delete">
+			<result type="redirectAction">
+				<param name="actionName">tableFind</param>
+				<param name="message">${message}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+		</action>
+		<!-- 用戶管理增刪改查 -->
+		<action name="saveAdmins" class="adminsAction" method="saveUser">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchAdmins</param>
+				<param name="message">${message}</param>
+			</result>
+			<result name="input">/manage/admins.jsp</result>
+		</action>
+		<action name="searchAdmins" class="adminsAction" method="searchAdmins">
+			<result name="success">/manage/adminsSearch.jsp</result>
+			<result name="input">/manage/adminsSearch.jsp</result>
+		</action>
+		<action name="deleteAdmins" class="adminsAction" method="deleteAdmins">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="findAdminsById" class="adminsAction" method="findAdminsById">
+			<result name="success">/manage/admins.jsp</result>
+			<result name="input">/manage/admins.jsp</result>
+		</action>
+		<action name="saveAdminsByPrepare" class="adminsAction" method="saveAdminsByPrepare">
+			<result name="success">/manage/admins.jsp</result>
+		</action>
+
+		<!-- 素材管理 -->
+
+		<action name="modMaterial" class="materialAction" method="mod">
+			<result type="redirectAction">
+				<param name="actionName">searchMaterial</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<action name="searchMaterial" class="materialAction" method="searchMaterial">
+			<result name="success">/manage/materialSearch.jsp</result>
+			<result name="input">/manage/materialSearch.jsp</result>
+			<result name="select">/manage/materialSelect.jsp</result>
+		</action>
+		<action name="uploadMaterial" class="materialAction" method="uploadMaterial">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchMaterial</param>
+				<param name="message">${message}</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">searchMaterial</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<action name="deleteMaterial" class="materialAction" method="deleteMaterial">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="deleteMaterialByIdList" class="materialAction" method="deleteMaterialByIdList">
+			<result name="success" type="plainText"></result>
+		</action>
+
+		<!--飲食類型  08-11-->
+		<action name="typeMerge" class="com.baiyi.order.action.FoodTypeAction" method="merge">
+			<result type="redirectAction">
+				<param name="actionName">typeFind</param>
+				<param name="message">${message}</param>
+				<param name="pageNo">${pageNo}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+		</action>
+		<action name="typeDelete" class="com.baiyi.order.action.FoodTypeAction" method="delete">
+			<result type="redirectAction">
+				<param name="actionName">typeFind</param>
+				<param name="message">${message}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+		</action>
+		<action name="typeFind" class="com.baiyi.order.action.FoodTypeAction" method="find">
+			<result>/manage/type.jsp</result>
+		</action>
+
+		<!--飲食口味 -->
+		<action name="tasteMerge" class="com.baiyi.order.action.TasteAction" method="merge">
+			<result type="redirectAction">
+				<param name="actionName">tasteFind</param>
+				<param name="message">${message}</param>
+				<param name="pageNo">${pageNo}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+		</action>
+		<action name="tasteDelete" class="com.baiyi.order.action.TasteAction" method="delete">
+			<result type="redirectAction">
+				<param name="actionName">tasteFind</param>
+				<param name="message">${message}</param>
+				<param name="pageNo">${pageNo}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+		</action>
+		<action name="tasteFind" class="com.baiyi.order.action.TasteAction" method="find">
+			<result>/manage/taste.jsp</result>
+		</action>
+		<!-- 飲食管理 -->
+		<action name="searchFood" class="foodAction" method="searchFood">
+			<result name="success">/manage/foodSearch.jsp</result>
+			<result name="input">/manage/foodSearch.jsp</result>
+			<result name="select">/manage/materialSelect.jsp</result>
+		</action>
+		<!-- 
+			<action name="saveFoodByPre" class="foodAction" method="saveFoodByPre">
+			<result name="success">/manage/foodAdd.jsp</result>
+			</action>
+		-->
+		<action name="findFood" class="foodAction" method="findFood">
+			<result name="success">/manage/foodAdd.jsp</result>
+		</action>
+		<action name="saveFood" class="foodAction" method="saveFood">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchFood</param>
+				<param name="message">${message}</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">searchFood</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<action name="deleteFood" class="foodAction" method="deleteFood">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="deleteFoodByIdList" class="foodAction" method="deleteFoodByIdList">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 跑馬燈管理 -->
+		<action name="searchMarquee" class="marqueeAction" method="searchMarquee">
+			<result name="success">/manage/marqueeSearch.jsp</result>
+			<result name="input">/manage/marqueeSearch.jsp</result>
+			<result name="select">/manage/materialSelect.jsp</result>
+		</action>
+		<action name="saveMarqueeByPrepare" class="marqueeAction" method="saveMarqueeByPrepare">
+			<result name="success">/manage/marqueeAdd.jsp</result>
+		</action>
+		<!-- 获取RSS新闻 -->
+		<action name="getRssNews" class="marqueeAction" method="getRssNews">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="findMarquee" class="marqueeAction" method="findMarquee">
+			<result name="success">/manage/marqueeAdd.jsp</result>
+		</action>
+		<action name="saveMarquee" class="marqueeAction" method="saveMarquee">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchMarquee</param>
+				<param name="message">${message}</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">searchMarquee</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<action name="deleteMarquee" class="marqueeAction" method="deleteMarquee">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="deleteMarqueeByIdList" class="marqueeAction" method="deleteByIdList">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 模板管理 -->
+		<action name="searchTemplate" class="templateAction" method="searchTemplate">
+			<result name="success">/manage/templateSearch.jsp</result>
+			<result name="input">/manage/templateSearch.jsp</result>
+		</action>
+		<action name="saveTemplateByPre" class="templateAction" method="saveTemplateByPre">
+			<result name="success">/manage/templateAdd.jsp</result>
+		</action>
+		<action name="findTemplate" class="templateAction" method="findTemplate">
+			<result name="success">/manage/templateAdd.jsp</result>
+		</action>
+		<action name="saveTemplate" class="templateAction" method="saveTemplate">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="deleteTemplate" class="templateAction" method="deleteTemplate">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="deleteTemplateByIdList" class="templateAction" method="deleteTemplateByIdList">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 終端管理 -->
+		<action name="searchTerminal" class="terminalAction" method="searchTerminal">
+			<result name="success">/manage/terminalSearch.jsp</result>
+			<result name="input">/manage/terminalSearch.jsp</result>
+		</action>
+		<action name="saveTerminalByPre" class="terminalAction" method="saveTerminalByPre">
+			<result name="success">/manage/terminalAdd.jsp</result>
+		</action>
+		<action name="findTerminal" class="terminalAction" method="findTerminal">
+			<result name="success">/manage/terminalAdd.jsp</result>
+		</action>
+		<action name="saveTerminal" class="terminalAction" method="saveTerminal">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchTerminal</param>
+				<param name="message">${message}</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">searchTerminal</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<action name="deleteTerminal" class="terminalAction" method="deleteTerminal">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="deleteTerminalByIdList" class="terminalAction" method="deleteTerminalByIdList">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 終端連線記錄 -->
+		<action name="searchTerminalDetect" class="terminalAction" method="searchTerminalDetect">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 終端監控畫面 -->
+		<action name="searchTerminalDetectPage" class="terminalAction" method="searchTerminalDetectPage">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="querySomeDetectrecords" class="detectrecordsAction" method="querySomeDetectrecords">
+			<result name="success">/manage/detectRecords.jsp</result>
+		</action>
+		<action name="detectPicturePage" class="detectrecordsAction" method="detectPicturePage">
+			<result name="success">/manage/detectPicturePage.jsp</result>
+		</action>
+		<!-- 遠程管理 -->
+		<action name="remoteManage" class="terminalAction" method="remoteManage">
+			<result name="success">/manage/remoteManage.jsp</result>
+		</action>
+		<!-- 修改服務端時間 -->
+		<action name="modifyServerTime" class="terminalAction" method="modifyServerTime">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 修改服務端時間 -->
+		<action name="sendOrder" class="terminalAction" method="sendOrder">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 下載管理 -->
+		<action name="terminalDownOnline" class="terminalAction" method="terminalDownOnline">
+			<result name="success">/manage/terminalChoose.jsp</result>
+		</action>
+		<!-- 保存下載信息 -->
+		<action name="saveDownRecord" class="downRecordAction" method="saveDownRecord">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!--取消下載 -->
+		<action name="cancleDownRecord" class="downRecordAction" method="cancleDownRecord">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 下載進度 -->
+		<action name="findDownProgress" class="downRecordAction" method="findDownProgress">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 獲取已下載模板 -->
+		<action name="findTerminalDownTemplate" class="downRecordAction" method="findTerminalDownTemplate">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 保存使用模板 -->
+		<action name="saveTerminalPlay" class="terminalAction" method="saveTerminalPlay">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 刪除終端使用模板 -->
+		<action name="deletetTerminalTemplate" class="downRecordAction" method="deletetTerminalTemplate">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 訂單編號規則管理 -->
+		<action name="findRule" class="orderRuleAction" method="find">
+			<result>/manage/orderRule.jsp</result>
+		</action>
+		<action name="saveRule" class="orderRuleAction" method="save">
+			<result type="redirectAction">
+				<param name="actionName">findRule</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<action name="delRule" class="orderRuleAction" method="delete">
+			<result type="redirectAction">
+				<param name="actionName">findRule</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<!-- 訂單管理 -->
+		<action name="searchOrder" class="orderAction" method="searchOrder">
+			<result name="success">/manage/orderSearch.jsp</result>
+			<result name="input">/manage/orderSearch.jsp</result>
+		</action>
+		<action name="deleteOrder" class="orderAction" method="deleteOrder">
+			<result name="success" type="plainText"></result>
+		</action>
+		<action name="deleteOrderByIdList" class="orderAction" method="deleteOrderByIdList">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 訂單統計 -->
+		<action name="orderExport" class="orderAction" method="export">
+			<result name="success" type="stream">
+				<param name="contentType">text/plain</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!-- 導出 -->
+		<action name="orderCalculate" class="orderAction" method="orderCalculate">
+			<result name="success">/manage/orderCalculate.jsp</result>
+			<result name="input">/manage/orderCalculate.jsp</result>
+		</action>
+	</package>
+
+	<package name="order" extends="json-default" namespace="/order">
+		<!-- 活动数据 厨房端统一管理 -->
+		<action name="getPromotion" class="terminalAction" method="getPromotion">
+			<result type="plainText"></result>
+		</action>
+
+		<!-- 活动修改 -->
+		<action name="updateBySend" class="com.baiyi.order.action.FoodStatusAction" method="updateBySend">
+			<result type="json">
+				<param name="root">jsonMap</param>
+			</result>
+		</action>
+
+		<!-- 現金警報-->
+		<action name="cashWarn" class="terminalAction" method="cashWarn">
+			<result type="plainText"></result>
+		</action>
+
+		<!-- 退幣異常處理 -->
+		<action name="refundAdd" class="com.baiyi.order.action.RefundWrongAction" method="add">
+			<result type="plainText"></result>
+		</action>
+
+		<!-- 查詢所有收費端信息 -->
+		<action name="getAllTerminalId" class="terminalAction" method="getAllTerminalId">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 获取服务端时间 -->
+		<action name="getServerTime" class="terminalAction" method="getServerTime">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 获取終端開關機事件-->
+		<action name="getBootAndShutdown" class="terminalAction" method="getBootAndShutdown">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 获取下載模板信息 -->
+		<action name="getTerminalDownTemplate" class="downRecordAction" method="getTerminalDownTemplate">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 上傳下載進度 -->
+		<action name="uploadDownProgress" class="downRecordAction" method="uploadDownProgress">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 下載完成 -->
+		<action name="updatePorgramNoteState" class="downRecordAction" method="updatePorgramNoteState">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 获取需要刪除的模板-->
+		<action name="getDeleteDownRecord" class="downRecordAction" method="getDeleteDownRecord">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 获取使用模板-->
+		<action name="getTerminalPlay" class="terminalAction" method="getTerminalPlay">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 获取訂單規則-->
+		<action name="getAllOrderRule" class="orderRuleAction" method="getAllOrderRule">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 上傳訂單-->
+		<action name="saveOrder" class="orderAction" method="saveOrder">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 更新終端版本號 -->
+		<action name="updateTerminalVer" class="terminalAction" method="updateTerminalVer">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 更新終端現金數量 -->
+		<action name="updateTerminalMoney" class="terminalAction" method="updateTerminalMoney">
+			<result name="success" type="plainText"></result>
+		</action>
+		<!-- 獲取收費端參數 -->
+		<action name="getTerminalParam" class="terminalAction" method="getTerminalParam">
+			<result name="success" type="plainText"></result>
+		</action>
+
+		<!-- 餐点类型 -->
+		<action name="getFoodType" class="terminalAction" method="getFoodType">
+			<result name="success" type="plainText"></result>
+		</action>
+	</package>
+
+	<package name="syscon" extends="visitOauth">
+		<action name="setCon" class="com.baiyi.order.action.SystemConfigAction" method="setCon">
+			<result type="redirectAction">
+				<param name="actionName">getCon</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+		<action name="getCon" class="com.baiyi.order.action.SystemConfigAction" method="getCon">
+			<result>/manage/sysConfig.jsp</result>
+		</action>
+	</package>
+
+
+	<!--  權限管理  -->
+	<package name="oauth" extends="visitOauth">
+		<!-- 用戶列表 -->
+		<action name="adminList" class="com.baiyi.order.action.RightManageAction" method="adminList">
+			<result>/manage/oauth/admin.jsp</result>
+		</action>
+		<!-- 用戶增加 -->
+		<action name="adminAdd" class="com.baiyi.order.action.RightManageAction" method="adminAdd">
+			<result>/manage/oauth/adminEdit.jsp</result>
+		</action>
+		<!-- 用戶編輯 -->
+		<action name="adminEdit" class="com.baiyi.order.action.RightManageAction" method="adminEdit">
+			<result>/manage/oauth/adminEdit.jsp</result>
+		</action>
+		<!-- 用戶保存 -->
+		<action name="adminSave" class="com.baiyi.order.action.RightManageAction" method="adminSave">
+			<result type="redirectAction">adminList</result>
+		</action>
+		<!-- 用戶刪除 -->
+		<action name="adminDel" class="com.baiyi.order.action.RightManageAction" method="adminDel">
+			<result type="redirectAction">adminList</result>
+		</action>
+		<!-- 用戶密碼修改 -->
+		<action name="adminModWord" class="com.baiyi.order.action.RightManageAction" method="adminModWord">
+			<result>/manage/oauth/adminPassword.jsp</result>
+		</action>
+
+		<!-- 角色列表 -->
+		<action name="roleList" class="com.baiyi.order.action.RightManageAction" method="roleList">
+			<result>/manage/oauth/role.jsp</result>
+		</action>
+		<!-- 角色增加 -->
+		<action name="roleAdd" class="com.baiyi.order.action.RightManageAction" method="roleAdd">
+			<result>/manage/oauth/roleEdit.jsp</result>
+		</action>
+		<!-- 角色編輯 -->
+		<action name="roleEdit" class="com.baiyi.order.action.RightManageAction" method="roleEdit">
+			<result>/manage/oauth/roleEdit.jsp</result>
+		</action>
+		<!-- 角色保存 -->
+		<action name="roleSave" class="com.baiyi.order.action.RightManageAction" method="roleSave">
+			<result type="redirectAction">roleList</result>
+		</action>
+		<!-- 角色刪除 -->
+		<action name="roleDel" class="com.baiyi.order.action.RightManageAction" method="roleDel">
+			<result type="redirectAction">roleList</result>
+		</action>
+	</package>
+
+
+	<!--  json 用於ajax獲取數據  -->
+	<package name="json" extends="visitOauth" namespace="/json">
+		<action name="*_*" class="com.baiyi.order.action.{1}Action" method="{2}">
+			<result type="json">
+				<param name="root">jsonMap</param>
+			</result>
+		</action>
+	</package>
+</struts>

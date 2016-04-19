@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 扫描spring注解 -->
+	<context:component-scan base-package="com.baiyi.order" />
+
+	<!-- 读取配置文件 -->
+	<context:property-placeholder location="classpath:/init.properties" />
+
+	<!-- dataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${datasource.driverClassName}" />
+		<property name="url" value="${datasource.url}" />
+		<property name="username" value="${datasource.username}" />
+		<property name="password" value="${datasource.password}" />
+		<!-- <property name="maxActive" value="50" /> <property name="maxIdle" value="2" /> <property name="maxWait" value="120000" /> <property name="defaultAutoCommit" value="true" /> <property name="testOnBorrow" value="true" /> <property name="testOnReturn" value="false" /> <property name="validationQuery" value="select 1 from dual" /> -->
+	</bean>
+
+	<!-- sessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 扫描配置文件实体类 -->
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:/com/baiyi/order/pojo</value>
+			</list>
+		</property>
+
+		<!-- 扫描注解实体对象 version太低？ <property name="packagesToScan" value="com.baiyi.order.pojo" /> -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+				<prop key="hibernate.connection.release_mode">${hibernate.connection.release_mode}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"> <property name="sessionFactory" ref="sessionFactory" /> </bean> <bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor"> <property name="transactionManager" ref="transactionManager" /> <property name="transactionAttributes"> <props> <prop key="save*">PROPAGATION_REQUIRED</prop> <prop key="delete*">PROPAGATION_REQUIRED</prop> <prop key="update*">PROPAGATION_REQUIRED</prop> <prop key="find*">PROPAGATION_REQUIRED,timeout_20,readOnly</prop> </props> </property> </bean> -->
+	<bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="merge*" propagation="REQUIRED" />
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- test:open service and dao session -->
+	<aop:config>
+		<aop:pointcut id="business" expression="execution(* com.baiyi.order.service..*.*(..))||execution(* com.baiyi.order.dao..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="business" />
+	</aop:config>
+
+	<!-- 注册hibernateTemplate -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+
+</beans>

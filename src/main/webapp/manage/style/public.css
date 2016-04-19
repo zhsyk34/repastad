@@ -1,0 +1,352 @@
+@charset "utf-8";
+
+/************************Global Reset************************/
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,input,address,big,cite,code,del,em,font,img,ins,small,strong,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,select,table,th,tr,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: PMingLiU, Tahoma, sans-serif, Helvetica, Georgia, Arial,
+		Verdana, "宋体";
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+body {
+	padding: 10px 10px 0 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	border: none;
+}
+
+a:link,a:visited,a:active,a {
+	text-decoration: none;
+}
+
+/*clearFloat*/
+div.clearFloat {
+	clear: both;
+	height: 0 !important;
+	display: block !important;
+	display: inline;
+}
+
+/************************Global Reset End************************/
+body#index {
+	background-color: #63C6FF;
+}
+
+/*wrapper*/
+#wrapper {
+	width: 99%;
+	min-width: 953px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+/*header*/
+#wrapper #header {
+	min-width: 953px;
+	height: 91px;
+	background: url("../images/top_bg1.jpg") repeat-x left top;
+	overflow: hidden;
+}
+
+#header #h_wrap {
+	min-width: 953px;
+	background: url("../images/top_bg2.jpg") no-repeat right top;
+	padding-right: 2px;
+}
+
+#h_wrap .top_nav {
+	float: right;
+	padding-top: 53px;
+	padding-right: 5px;
+}
+
+.top_nav a {
+	margin-left: 4px;
+}
+
+#h_wrap .logo {
+	width: 500px;
+	height: 91px;
+}
+
+/*main*/
+#main {
+	border: 1px solid #4E9DBB;
+	background: #FFFFFF url("../images/left_border.jpg") repeat-y 190px top;
+	overflow: hidden;
+}
+
+/*left nav*/
+#main #left_nav {
+	float: left;
+	width: 190px;
+	height: 100%;
+	margin-right: 9px;
+}
+
+#left_nav h3.left_nav_t {
+	height: 36px;
+	line-height: 36px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #2B4850;
+	padding-left: 14px;
+	margin-bottom: 3px;
+	background: url("../images/left_tbg.jpg") repeat-x left top;
+	_border-right: 1px solid #4B9BB4;
+}
+
+ul.nav {
+	width: 169px;
+	margin: 0 auto;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+ul.nav li {
+	margin-bottom: 9px;
+}
+
+ul.nav li span {
+	cursor: pointer;
+}
+
+ul.nav li a {
+	color: #2B4850;
+}
+
+ul.nav li img {
+	vertical-align: top;
+}
+
+ul.nav li ul.sub_nav {
+	background-color: #B4DAFF;
+	padding: 5px 3px 5px 44px;
+}
+
+ul.nav li ul.sub_nav li {
+	line-height: 20px;
+	margin-bottom: 0;
+	padding: 5px 0;
+}
+
+/*content*/
+#main #right {
+	float: left;
+	width: 100%;
+	margin-right: -200px;
+	height: 100%;
+}
+
+#right #content {
+	width: auto;
+	height: 100%;
+	margin-right: 198px;
+}
+
+/*tab*/
+#tab {
+	width: auto;
+	height: 36px;
+	background: url("../images/right_tab_bg.jpg") repeat-x left top;
+	position: relative;
+}
+
+#tab ul {
+	height: 31px;
+	position: absolute;
+	top: 6px;
+	left: 12px;
+	padding-right: 12px;
+}
+
+#tab ul li {
+	float: left;
+	height: 31px;
+	padding: 0 22px 0 10px;
+	background: url("../images/tab_bg_h1.jpg") no-repeat left top;
+	font-size: 15px;
+	font-weight: bold;
+	margin-right: 1px;
+	position: relative;
+	cursor: pointer;
+}
+
+#tab ul li span.tab_t {
+	display: inline-block;
+	width: 112px;
+	line-height: 31px;
+	background: url("../images/tab_bg_h3.jpg") repeat-x left top;
+	text-align: center;
+	overflow: hidden; /*讓超出的文字顯示為省略號(...)*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#tab ul li div.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 17px;
+	height: 26px;
+	padding: 5px 0 0 5px;
+	background: url("../images/tab_bg_h2.jpg") no-repeat right top;
+	z-index: 9;
+}
+
+#tab ul li.t_show {
+	background: #fff url("../images/tab_bg_s1.jpg") no-repeat left top;
+}
+
+#tab ul li.t_show span.tab_t {
+	background: none;
+	border-top: 1px solid #47A0B2;
+}
+
+#tab ul li.t_show div.close {
+	background: url("../images/tab_bg_s2.jpg") no-repeat right top;
+}
+
+#tab ul li div.close a {
+	display: block;
+	width: 12px;
+	height: 13px;
+	background: url("../images/close_ico.png") no-repeat left top;
+}
+
+#tab ul li div.close a:hover {
+	background: url("../images/close_ico_h.png") no-repeat left top;
+}
+
+/*first li element*/
+#tab ul li.first_tab {
+	padding: 0 16px 0 16px;
+}
+
+#tab ul li.first_tab div.close {
+	width: 11px;
+}
+
+/*loading*/
+.loading {
+	height: 92%;
+	margin: 5px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+	position: relative;
+}
+
+/*right h3*/
+div.content_t {
+	height: 45px;
+	line-height: 45px;
+	background: url("../images/right_tbg2.jpg") repeat-x left top;
+}
+
+div.content_t h3 {
+	padding-left: 60px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	background: url("../images/right_tbg1.jpg") no-repeat left top;
+}
+
+div.content_t h3 span {
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 2px;
+	line-height: 43px;
+	background: url("../images/right_tbg3.jpg") no-repeat right top;
+}
+
+/*window modal win*/
+#modal {
+	position: absolute;
+	background-color: #000;
+	display: none;
+	top: 0;
+	left: 0;
+	filter: alpha(opacity =     60); /* 滤镜 IE */
+	opacity: 0.6;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+/*footer*/
+#footer {
+	height: 25px;
+	line-height: 25px;
+	background: url("../images/footer_bg.jpg") repeat-x left top;
+	color: #4E4D55;
+	border: 1px solid #47A2B5;
+	border-top: none;
+	font-size: 13px;
+	padding: 0 9px 0 13px;
+}
+
+#footer .date {
+	float: right;
+	padding-left: 18px;
+	background: url("../images/date_icon.jpg") no-repeat left 6px;
+}
+
+/************************page************************/
+#page {
+	width: 100%;
+	text-align: right;
+	clear: both;
+	padding: 18px 0;
+	position: relative;
+}
+
+#page ul {
+	line-height: 21px;
+}
+
+#page ul li {
+	display: inline;
+	font-size: 12px;
+	line-height: 22px;
+	margin: 0 3px;
+	cursor: pointer;
+	padding: 5px 0;
+	color: #040404;
+}
+
+#page ul li.first {
+	padding-left: 21px;
+	background: url("../images/first_icon.jpg") no-repeat left 2px;
+}
+
+#page ul li.prev {
+	padding-left: 21px;
+	background: url("../images/prev_icon.jpg") no-repeat left 3px;
+}
+
+#page ul li.next {
+	padding-right: 21px;
+	background: url("../images/next_icon.jpg") no-repeat right 3px;
+}
+
+#page ul li.last {
+	padding-right: 21px;
+	background: url("../images/last_prev.jpg") no-repeat right 3px;
+}

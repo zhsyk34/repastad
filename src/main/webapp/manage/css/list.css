@@ -1,0 +1,133 @@
+/*reset*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: PMingLiU, "宋体";
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+body {
+	padding:12px;
+}
+
+ul {
+	list-style: none;
+}
+
+/*標頭*/
+div.title {
+	height: 45px;
+	line-height: 45px;
+	background: url("../../sysimg/list/title.jpg") repeat-x left top;
+}
+
+div.title h3 {
+	padding-left: 60px;
+	background: url("../../sysimg/list/title_left.jpg") no-repeat left top;
+}
+
+div.title h3 div {
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	background: url("../../sysimg/list/title_right.jpg") no-repeat right top
+		;
+}
+
+/*主體*/
+div.content {
+	pad-bottom: 10px;
+	border: 1px solid #C9C9C9;
+	border-top: none;
+	padding: 10px 3px;
+}
+
+div.operation {
+	height: 50px;
+	width: 100%;
+	clear: both;
+	border-bottom: 1px solid #C9C9C9;
+	margin-bottom: 5px;
+}
+
+#left{
+	float:left;
+	margin-left: 15px;
+}
+#right{
+	float:right;
+	margin-right: 40px;
+}
+
+div.operation li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+}
+
+.content table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Tahoma;
+	color: #02070B;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.content tr {
+	background-color: #F0F5FB;
+	height: 40px;
+}
+
+.content  th {
+	font-size: 15px;
+	font-weight: 400;
+	border: 2px solid #FFF;
+	background-color: #E7F3FF;
+	padding: 2px 0;
+}
+
+.content  td {
+	font-size: 14px;
+	font-weight: 300;
+	border: 2px solid #FFF;
+	padding: 1px 3px;
+}
+
+
+/*查詢input*/
+.keyword {
+	width: 166px;
+	height: 27px;
+	line-height: 27px;
+	border: 1px solid #C9C9C9;
+	padding: 2px 5px;
+	vertical-align: middle;
+	background-image: url("../../sysimg/keyword.jpg");
+}
+
+
+
+/*img*/
+img {
+	cursor: pointer;
+	vertical-align: middle;
+	margin-left: 8px;
+}
+.del{
+	margin-left:30px;
+}
+
+/*edit*/
+
+/**/
+div.button{
+	text-align: center;
+	margin: 15px 0;
+}

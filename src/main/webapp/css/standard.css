@@ -1,0 +1,58 @@
+body {
+	padding: 10px;
+	font-family: KaiTi, PMingLiU, SimSun, sans-serif, Arial;
+	font-size: 14px;
+	line-height: 20px;
+}
+/*header*/
+.title {
+	height: 40px;
+	background: #3DB3DA;
+	border-radius: 12px 12px 0 0;
+}
+
+.title h3 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 40px;
+	text-indent: 2em;
+	color: #fff;
+}
+
+/*content*/
+.content {
+	border: 1px solid #C9C9C9;
+	padding: 5px 3px;
+}
+
+.table-config tr{
+	height: 50px;
+}
+
+.table-config th {
+	width: 120px;
+	text-align: left;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.table-config td {
+	padding: 6px 10px;
+	text-align: left;
+}
+
+.table .btn{
+	padding: 3px 6px;
+	font-size:12px;
+	line-height: 1.5;
+}
+
+/*footer*/
+.button {
+	text-align: center;
+}
+
+.button .btn {
+	margin: 10px 40px;
+	font-weight: 700;
+}

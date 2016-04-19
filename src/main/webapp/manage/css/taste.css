@@ -1,0 +1,82 @@
+ul li {
+	float: left;
+	margin-left: 12px;
+	height: 28px;
+	line-height: 28px;
+}
+
+a.linkbutton {
+	padding: 2px 5px;
+	height: 20px;
+	line-height: 20px;
+}
+
+#add {
+	margin-left: 88px;
+}
+
+input[type=text],select {
+	height: 24px;
+}
+
+select {
+	width: 120px;
+}
+
+/**/
+.dialog {
+	width: 420px;
+}
+
+/*combox*/
+.combox {
+	position: relative;
+}
+
+.combox input,.combox select {
+	position: absolute;
+	left: 10px;
+	top: 2px;
+	padding: 0;
+	margin: 0;
+}
+
+.combox input {
+	width: 120px;
+	z-index: 99;
+	height: 22px;
+}
+
+.combox select {
+	width: 138px;
+}
+
+#search {
+	cursor: pointer;
+	background: linear-gradient(to bottom, #FFF 0px, #E6E6E6 100%);
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: #39609C;
+	padding: 2px 8px;
+}
+
+#search:hover {
+	color: #F2F2F2;
+	background: #3393E5;
+}
+
+.keyword {
+	height: 24px;
+	line-height: 24px;
+}
+
+.page {
+	float: right;
+	margin: 5px 2px 0 0;
+}
+
+.list th{
+	text-align: center;
+}
+

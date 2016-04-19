@@ -1,0 +1,1632 @@
+/*****************************monitor*****************************/
+/*tables*/
+div.tables{
+	width:auto;
+	width:100%\9;
+	padding: 4px 6px 0 6px;
+	border: 1px solid #C9C9C9;
+	border-top: none;
+}
+div.tables table{
+	border-collapse: collapse;
+	font-family: Tahoma;
+	font-size: 13px;
+	color: #02070B;
+}
+div.tables table tr{
+	background-color: #F0F5FB;
+}
+div.tables table th{
+	min-width:40px;
+	height: 35px;
+	font-size: 15px;
+	font-weight: 100;
+	color: #02070B;
+	border: 2px solid #fff;
+	background-color: #E7F3FF;
+	padding: 2px 0;
+}
+div.tables table td{
+	height: 40px;
+	border: 2px solid #fff;
+	text-align: center;
+	padding: 0 3px;
+	word-break:break-all;
+}
+div.tables table td span, div.tables table td a{
+	color: #0F02FF;
+}
+div.tables table td b{
+	font-weight: 100;
+	color: #FD000A;
+}
+/*****************************mode*****************************/
+.weather_w{
+	padding: 4px 5px 9px 5px;
+	border: 1px solid #C9C9C9;
+	border-top: none;
+}
+.weather_w .mode{
+	height: 19px;
+	line-height: 19px;
+	padding: 19px 0;
+	background-color: #E7F3FF;
+	text-align: center;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+.mode span{
+	margin-left: 35px;
+}
+.mode span input{
+	margin-right: 5px;
+}
+.button{
+	text-align: center;
+	padding-bottom: 15px;
+}
+.button input{
+	width: 84px;
+	height: 27px;
+	margin-right: 12px;
+	vertical-align: middle;
+}
+.button .goback{
+	display: inline-block;
+	width: 84px;
+	height: 27px;
+	vertical-align: middle;
+	cursor: pointer;
+	margin:0 15px;
+}
+img.goback{
+	cursor: pointer;
+}
+/*****************************terminal logs*****************************/
+.tlogs_search{
+	border-bottom: 1px solid #C9C9C9;
+	margin-bottom: 10px
+}
+.tlogs_search .button{
+	margin: 13px 0;
+}
+.tlogs_search .button input{
+	width: 96px;
+	margin-right: 56px;
+}
+div.tlogs_search table td{
+	text-align: left;
+	padding: 0 8px;
+}
+div.tlogs_search table td input{
+	width: 152px;
+	height: 19px;
+	line-height: 19px;
+	border: 1px solid #BCC1C5;
+	padding: 1px 2px;
+	font-size: 13px;
+	margin-right: 7px;
+	margin-left: 8px;
+}
+div.tlogs_search table td select{
+	font-size: 15px;
+}
+div.tlogs_search table td.date img{
+	vertical-align: -4px;
+	+vertical-align: -1px;
+	margin-right: 10px;
+}
+/*****************************marquee list*****************************/
+div.content_t2{
+	height: 30px;
+	line-height: 30px;
+	background: url("../images/right_tbg2_2.jpg") repeat-x left top;
+}
+div.content_t2 h3{
+	font-size: 15px;
+	background: url("../images/right_tbg2_1.jpg") no-repeat left top;
+}
+div.content_t2 h3 span{
+	line-height: 27px;
+	padding-bottom: 3px;
+	background: url("../images/right_tbg2_3.jpg") no-repeat right top;
+}
+.m_menu, .rotation_t{
+	height: 34px;
+	padding: 6px 0 7px 34px;
+	border: 1px solid #C9C9C9;
+	border-top: none;
+	margin-bottom: 13px;
+}
+.m_menu a{
+	margin-right: 11px;
+}
+.m_menu img{
+	cursor: pointer;
+}
+.marquee_s{
+	padding: 6px 0 10px 15px;
+	border-bottom: 1px solid #C9C9C9;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+.marquee_s input{
+	vertical-align: middle;
+	margin-right: 12px;
+}
+.marquee_s input.keyword{
+	width: 166px;
+	height: 27px;
+	line-height: 27px;
+	padding: 1px 2px;
+	border: 1px solid #C9C9C9;
+	background: url("../images/input_bg.jpg") repeat-x left top;
+	font-size: 15px;
+}
+.marquee_s input.submit{
+	width: 84px;
+	height: 27px;
+}
+div.marquee_list table td div{
+	margin: 0 auto;
+	width: 25px;
+	height: 25px;
+}
+#page .del{
+	position: absolute;
+	top: 18px;
+	left: 5px;
+	text-align: left;
+}
+#page .del a{
+	margin-right: 18px;
+}
+/*****************************marquee add*****************************/
+div.marquee_add table td{
+	text-align: left;
+	padding: 0 15px;
+}
+div.marquee_add table td.title input{
+	width: 214px;
+	height: 23px;
+	line-height: 23px;
+	font-size: 13px;
+	padding: 1px 2px;
+	border: 1px solid #B3D9FE;
+}
+div.marquee_add table td.color input{
+	width: 113px;
+	height: 27px;
+	background: url("../images/marquee_btn4.jpg") no-repeat left top;
+	border: none;
+}
+div.marquee_add table td.radio img{
+	margin: 0 36px 0 8px;
+	vertical-align: -4px;
+}
+div.marquee_add table td b{
+	margin-left: 12px;
+}
+div.marquee_add table td.title b{
+	vertical-align: -4px;
+}
+div.marquee_add table td textarea{
+	width: 410px;
+	height: 68px;
+	border: 1px solid #B3D9FE;
+	margin: 6px 0;
+	font-size: 13px;
+}
+div.marquee_add table td select{
+	font-size: 15px;
+}
+div.marquee_add .button{
+	margin: 16px 0 10px 0;
+}
+div.marquee_add .button input{
+	width: 89px;
+	height: 32px;
+	margin: 0 15px;
+}
+div.marquee_add .button a.goback{
+	width: 89px;
+	height: 32px;
+}
+div.marquee_add .button input.reset{
+	background: url("../images/marquee_btn6.jpg") no-repeat left top;
+	border: none;
+	cursor: pointer;
+}
+/*****************************news list*****************************/
+div.tables table td.td_left{
+	text-align: left;
+	padding: 0 10px 0 10px;
+}
+/*****************************news add*****************************/
+div.news_add table td{
+	text-align: left;
+	padding: 0 32px;
+}
+div.news_add table td input, div.news_add table td textarea{
+	width: 505px;
+	height: 27px;
+	line-height: 27px;
+	padding: 1px 2px;
+	border: 1px solid #ACCCFB;
+	font-size: 13px;
+}
+div.news_add table td textarea{
+	height: 195px;
+	line-height: 15px;
+	padding: 2px 3px;
+	margin: 8px 0;
+}
+div.news_add table td b{
+	margin-left: 6px;
+}
+div.news_add .button{
+	margin: 19px;
+}
+/*****************************program list*****************************/
+div.tables table td.p_edit a{
+	margin-right: 4px;
+}
+/*****************************play program*****************************/
+div.paly_program table td.terminal_w,div.paly_program table td.program_w{
+	padding: 0;
+}
+td.terminal_w table td input{
+	vertical-align: -2px;
+}
+div.paly_program table th input.checkAll{
+	margin-right: 8px;
+}
+td.terminal_w table td, td.program_w table td{
+	padding: 0 14px;
+	text-align: left;
+	border-right: none;
+	border-left: none;
+}
+td.program_w table td.radio, td.program_w table td.checkbox{
+	padding: 0;
+	text-align: center;
+	border-right: 2px solid #FFFFFF;
+}
+td.terminal_w table td input{
+	margin-right: 8px;
+}
+div.paly_program .button{
+	margin: 16px 0;
+}
+/*****************************program rotation*****************************/
+div.tables table td.r_edit a{
+    margin: 0 8px;
+}
+/*****************************rotation add*****************************/
+.rotation_t{
+	font-size: 15px;
+}
+.rotation_t input{
+	background: url("../images/input_bg.jpg") repeat-x left top;
+    border: 1px solid #C9C9C9;
+    font-size: 15px;
+    height: 27px;
+    line-height: 27px;
+    padding: 1px 2px;
+    width: 166px;
+    margin-right: 30px;
+    vertical-align: middle;
+}
+.rotation_t span{
+	color: #FD000A;
+}
+td.program_w table td.play{
+	text-align: center;
+	padding: 0 3px;
+}
+.program_w table td.parameter{
+	width: 96px;
+}
+.program_w table td.parameter input{
+	width: 70px;
+	height: 23px;
+	line-height: 23px;
+	font-size: 13px;
+	padding: 1px 2px;
+	margin-right: 4px;
+	border: 1px solid #B3D9FE;
+}
+/*****************************program logs list*****************************/
+#p_logs{
+	width: 99%;
+	margin: 8px auto;
+	min-width: 1025px;
+	_width:expression((documentElement.clientWidth < 1025) ? "1025px" : "99%" );
+}
+#p_logs .tables{
+	width: auto;
+	min-width: 1011px;
+	_width:expression((documentElement.clientWidth < 1011) ? "1011px" : "auto" );
+}
+div.tables .logs_search{
+	height: 27px;
+	line-height: 27px;
+	padding: 14px;
+	margin-bottom: 11px;
+	font-size: 15px;
+}
+.logs_search input{
+	vertical-align: middle;
+	margin-left: 20px;
+}
+.logs_search input.date{
+	width: 153px;
+	height: 20px;
+	line-height: 20px;
+	padding: 1px 2px;
+	border: 1px solid #BCC1C5;
+	font-size: 13px;
+	margin: 0 7px 0 8px;
+}
+.logs_search input.reset{
+	width: 80px;
+	height: 27px;
+	border: none;
+	background: url("../images/logs_btn2.jpg") no-repeat left top;
+}
+.logs_search img{
+	margin-right: 10px;
+    vertical-align: middle;
+}
+div.tables .logs_list{
+	width: 100%;
+	padding-bottom: 3px;
+}
+.logs_list h4.list_t{
+	height: 28px;
+	line-height: 28px;
+	padding: 5px 0 5px 41px;
+	color: #17A4CF;
+	font-size: 19px;
+	font-weight: bold;
+	background: url("../images/logs_icon2.jpg") no-repeat 15px 12px;
+	border-bottom: 1px solid #C9C9C9;
+	margin-bottom: 10px;
+}
+#p_logs div.logs_list table{
+	font-size: 12px;
+}
+#p_logs div.logs_list table th{
+	line-height: 10px;
+	font-size: 12px;
+	font-weight: 100;
+	padding: 2px;
+}
+#p_logs div.logs_list table th.d_th{
+	line-height: 16px;
+	word-break : break-all;
+	word-wrap: break-word;
+}
+#p_logs div.logs_list table td{
+	line-height: 16px;
+	padding: 2px 0;
+	color: #8E8E8E;
+}
+.logs_tips{
+	width: 309px;
+	height: 217px;
+	margin: 46px auto 76px;
+}
+/*****************************program add*****************************/
+.program_add{
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #BABABA;
+}
+.program_list ul{
+	width: 102%;
+	padding-top: 20px;
+}
+.program_list ul li{
+	float: left;
+	width: 122px;
+	height: 136px;
+	margin-right: 6px;
+	padding-bottom: 24px;
+	overflow: hidden;
+}
+.program_list ul li img{
+	border: 1px solid #767676;
+	vertical-align: top;
+}
+.program_list ul li span{
+	display: inline-block;
+	width: 120px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 13px;
+	padding-top: 4px;
+	overflow: hidden;		/*讓超出的文字顯示為省略號(...)*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.program_list ul li span a{
+	color: #000;
+}
+/*****************************program edit*****************************/
+.temp_info{
+	padding: 4px 26px 11px 26px;
+	border: 1px solid #C9C9C9;
+	border-top: none;
+	margin-bottom: 15px;
+}
+.temp_info div.t_img{
+	float: left;
+	margin-right: 150px;
+}
+.temp_info div.info{
+	float: left;
+	line-height: 22px;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 50px;
+}
+div.edit table td{
+	line-height: 40px;
+}
+.edit table td.text input{
+	background: url("../images/input_bg.jpg") repeat-x scroll left top transparent;
+    border: 1px solid #C9C9C9;
+    font-size: 15px;
+    height: 27px;
+    line-height: 27px;
+    padding: 1px 2px;
+    width: 268px;
+}
+.edit table td.text input.selectinput{
+	height: 15px;
+	width: 22px;
+	margin-left: 10px;
+	background: transparent;
+	border: 0px;
+}
+.edit table td.text input#isMarquee{
+	margin-left: 20px;
+}
+.edit table td.text b{
+	margin-left: 5px;
+}
+.edit table td.text div{
+	float: left;
+	min-width: 274px;
+	_width:expression((documentElement.clientWidth < 274) ? "274px" : "274px" );
+}
+.edit table td.text a.s_pic{
+	display: block;
+	float: left;
+	width: 47px;
+	height: 21px;
+	margin-left: 15px;
+	margin-top: 9px;
+}
+.edit table td.text select{
+	font-size: 15px;
+}
+.edit table td.btn span{
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #A8D7E9;
+	background: url("../images/program_btn_bg.jpg") repeat-x left top;
+	margin-right: 16px;
+	cursor: pointer;
+	font-size: 13px;
+	padding: 0 4px;
+	color: #000;
+}
+.p_btn{
+	height: 27px;
+	line-height: 27px;
+	padding: 16px 4px 11px 4px;
+}
+.p_btn .btn1{
+	float: right;
+	height: 27px;
+	line-height: 27px;
+}
+.p_btn2{
+	text-align: center;
+}
+.btn1 input,.p_btn2 input{
+	margin: 0 10px;
+}
+.p_btn .btn2{
+	font-size: 15px;
+	font-weight: bold;
+}
+.btn2 img{
+	vertical-align: -2px;
+	margin-right: 6px;
+}
+.btn2 a{
+	color: #000;
+	margin-right: 23px;
+}
+/*****************************material edit*****************************/
+.marquee_s input.m_radio{
+	margin: 0 3px 0 15px;
+	vertical-align: -2px;
+}
+.material_list{
+	width: 100%;
+	border-bottom: 1px solid #D7D7D7;
+}
+.material_list ul{
+	padding-top: 7px;
+	width: 100%;
+}
+.material_list ul li{
+	float: left;
+	width: 145px;
+	padding: 0 8px 12px 5px;
+}
+.material_list ul li h4{
+	width: 122px;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 23px;
+	background: url("../images/material_icon4.jpg") no-repeat 2px 9px;
+	font-size: 15px;
+	overflow: hidden;		/*讓超出的文字顯示為省略號(...)*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.material_list ul li div{
+	width: 126px;
+	height: 134px;
+	border: 1px solid #959394;
+	margin: 0 0 9px 17px;
+}
+.material_list ul li div.config{
+	height: 25px;
+	border: none;
+}
+.material_list ul li div img{
+	cursor: pointer;
+}
+.material_list ul li .config img{
+	margin-right: 3px;
+	vertical-align: top;
+}
+.m_select span{
+	margin:0 5px;
+	padding:3px;
+	cursor: pointer;
+}
+.m_select img{
+	margin-top:8px;
+	padding:3px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.m_select span:HOVER{
+	background: #B4DAFF;
+}
+/*****************************upload*****************************/
+#upload{
+	display: none;
+	width: 549px;
+	position: absolute;
+	top: 30px;
+	left: 100px;
+	z-index: 99;
+}
+.u_title{
+	height: 30px;
+	background: url("../images/upload_tbg.png") no-repeat left top;
+	position: relative;
+}
+.o_rule{
+	background: url("../images/orderrule_tbg.png") no-repeat left top;
+}
+.u_title span.u_close{
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	right: 8px;
+	top: 1px;
+	font-size: 28px;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+}
+.upload_w,.backup_w{
+	border: 1px solid #BCB8B9;
+	border-top: 0;
+	padding: 0 8px 6px 8px;
+	background-color: #fff;
+}
+.upload_w table{
+	border-collapse: collapse;
+	font-size: 15px;
+	margin: 0 auto;
+}
+.upload_w table th, .upload_w table td{
+	height: 50px;
+	background-color: #E7F3FF;
+	border: 2px solid #fff;
+	font-weight: 100;
+}
+.upload_w table td{
+	padding-left: 3px;
+	position: relative;
+}
+.upload_w table td input.text, .backup_w input.text{
+	width: 155px;
+	border: 1px solid #ACCCFB;
+	font-size: 13px;
+	height: 27px;
+	line-height: 27px;
+	padding: 1px 2px;
+	vertical-align: middle;
+}
+.upload_w table td img{
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.upload_w table td img.del{
+	margin-left: 0px;
+	cursor: pointer;
+}
+.upload_w table td input.file{
+	position: absolute;
+    left: 0px;
+    top: 10px;
+    width: 243px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 18px;
+	filter:alpha(opacity=0);
+	opacity:0;
+	cursor: pointer;
+}
+.upload_w .m_btn{
+	text-align: center;
+	padding: 8px 0px;
+	border-bottom: 3px solid #E7E7E7;
+	margin-bottom: 5px;
+}
+.upload_w .m_btn img{
+	margin-left: 20px;
+	cursor: pointer;
+}
+.upload_w .tips{
+	line-height: 20px;
+	font-size: 15px;
+	font-weight: 100;
+	color: #465165;
+	background-color: #B2E3F2;
+	padding: 5px;
+}
+/*****************************schedule add*****************************/
+div.schedule_add table td{
+	padding-left: 14px;
+	text-align: left;
+}
+div.schedule_add table td select{
+	font-size: 15px;
+}
+div.schedule_add table td.select1 select{
+	width: 410px;
+	margin: 9px 0;
+	border: 1px solid #ACCCFB;
+	vertical-align: middle;
+	font-size: 13px;
+	padding-left: 4px;
+}
+div.schedule_add table td b{
+	vertical-align: middle;
+	margin-left: 5px;
+}
+div.schedule_add table td span{
+	color: #FD000A;
+}
+div.schedule_add table td.s_title input{
+	width: 380px;
+	height: 27px;
+    line-height: 27px;
+	border: 1px solid #ACCCFB;
+    font-size: 13px;
+    padding: 1px 2px;
+    vertical-align: middle;
+}
+div.schedule_add table td.s_title img{
+	cursor:pointer;
+    vertical-align: middle;
+}
+div.schedule_add table td.s_title input.radio{
+	border:none;
+	width: 15px;
+}
+div.schedule_add table td.preview{
+	width:275px;
+	padding:0px;
+}
+div.schedule_add table td.preview div{
+	width: 263px;
+	height:245px;
+	background: #40352F;
+	position: relative;
+	padding:6px;
+	margin: 0px;
+}
+div.schedule_add table td.preview div.food{
+	width: 263px;
+	height: 203px;
+	padding:0px;
+}
+div.schedule_add table td.preview div.food img{
+	width: 263px;
+	height: 100%;
+}
+div.schedule_add table td.preview div img.border{
+	width: 275px;
+	height: 215px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+div.schedule_add table td.preview div label{
+	position: absolute;
+	left: 14px;
+	top: 170px;
+	font-size: 24px;
+	color:#fff;
+	overflow:hidden;
+	white-space : nowrap;
+	width:250px;
+}
+div.schedule_add table td.preview div span{
+	color: yellow;
+	font-size: 26px;
+	margin: 5px 0;
+	height:40px;
+	line-height: 40px;
+	font-weight: 500px;
+}
+div.schedule_add table td.preview div span.num{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 24px;
+}
+.material_list ul li.previewLi{
+	width: 290px;
+}
+.material_list ul li.previewLi .config{
+	text-align:center;
+	width: 280px;
+}
+.material_list ul li.previewLi .config img{
+	margin:0 8px;
+}
+.material_list ul li div.preview{
+	width: 263px;
+	height:245px;
+	background: #40352F;
+	position: relative;
+	padding:6px;
+	margin-bottom: 5px;
+}
+.material_list ul li div.preview div.food{
+	width: 263px;
+	height: 203px;
+	padding:0px;
+	margin: 0px;
+}
+.material_list ul li div.preview div.food img{
+	width: 263px;
+	height: 100%;
+}
+.material_list ul li div.preview img.border{
+	width: 275px;
+	height: 215px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.material_list ul li div.preview label{
+	position: absolute;
+	left: 14px;
+	top: 170px;
+	font-size: 24px;
+	color:#fff;
+	overflow:hidden;
+	white-space : nowrap;
+	width:250px;
+}
+.material_list ul li div.preview span{
+	color: yellow;
+	font-size: 26px;
+	margin: 5px 0;
+	height:40px;
+	line-height: 40px;
+	font-weight: 500px;
+}
+.material_list ul li div.preview span.num{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 24px;
+}
+div.schedule_add table td div{
+	margin: 7px 0;
+	font-weight: bold;
+	color: #2B2F32;
+}
+div.schedule_week input{
+	margin-right: 6px;
+	*margin-right: 3px;
+	vertical-align: -1px;
+	margin-left: 4px;
+}
+div.schedule_week input.mon{
+	margin-left: 0;
+}
+div.schedule_date input{
+	margin-right: 6px;
+	*margin-right: 3px;
+	vertical-align: -1px;
+}
+div.schedule_date input.date1{
+	width: 128px;
+	height: 20px;
+    line-height: 20px;
+	border: 1px solid #ACCCFB;
+    font-size: 13px;
+    padding: 1px 28px 1px 2px;
+    background: #fff url("../images/date_icon2.jpg") no-repeat 136px 3px;
+}
+div.schedule_add table td.s_time{
+    font-size: 13px;
+    font-weight: bold;
+    color: #2B2F32;
+}
+div.schedule_add table td.s_time select{
+	margin-right: 4px;
+	vertical-align: middle;
+}
+div.schedule_add .button{
+	margin: 17px 0;
+}
+div.schedule_add .button input{
+	width: 89px;
+	height: 32px;
+	margin: 0 15px;
+}
+div.schedule_add .button input.reset{
+	border: none;
+	background: url("../images/marquee_btn6.jpg") no-repeat left top;
+	cursor: pointer;
+}
+div.schedule_add .button a.goback{
+	width: 89px;
+	height: 32px;
+}
+/*****************************schedule edit*****************************/
+div.period_list{
+	margin-top: 4px;
+}
+div.period_list table th{
+	color: #28318E;
+	font-weight: bold;
+}
+div.period_list table td{
+	text-align: center;
+	padding: 0 3px;
+}
+div.period_list table td a img{
+	vertical-align: -2px;
+	*vertical-align: -1px;
+}
+/*****************************schedule Logs Week*****************************/
+#p_logs div.week_logs table th{
+	height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+}
+#p_logs div.week_logs table td{
+	height: 25px;
+}
+#p_logs div.week_logs table th.d_th{
+	height: 25px;
+	font-size: 12px;
+	font-weight: 100;
+}
+div.week_logs table td span{
+	color: #800080;
+}
+/*****************************schedule Logs Date*****************************/
+#p_logs div.date_logs{
+	overflow-x: scroll;
+}
+#p_logs div.date_logs table th{
+	line-height: 16px;
+	white-space: nowrap;
+}
+#p_logs div.date_logs table td{
+	height: 35px;
+}
+#p_logs div.date_logs table td span{
+	color: #800080;
+}
+/*****************************insert schedule add*****************************/
+div.schedule_add table td.status input{
+	vertical-align: -1px;
+	margin-right: 2px;
+	*margin-right: 0;
+}
+/*****************************terminal list*****************************/
+div.terminal_list table th{
+	font-size: 13px;
+}
+div.terminal_list table td span.ver{
+	color: #008000;
+}
+div.terminal_list table td span.ver_hl{
+	color: #FF0000;
+}
+div.terminal_list table td span.reg{
+	color: #FF0000;
+}
+/*****************************terminal add*****************************/
+.explain{
+	font-size: 13px;
+	color: #FE0002;
+	padding: 17px 0 24px 0;
+	background: url("../images/terminal_icon1.jpg") repeat-x left top;
+}
+.explain div{
+	line-height: 23px;
+	background-color: #E6F2FE;
+	padding: 4px 10px;
+}
+.explain div p{
+	text-indent: 1em;
+}
+.explain div ul{
+	padding-left: 2.3em;
+	list-style: decimal;
+}
+.explain div b{
+	font-weight: 100;
+	color: #31860F;
+}
+/*****************************terminal edit*****************************/
+div.terminal_edit .button input{
+    height: 27px;
+    width: 84px;
+}
+div.terminal_edit .button a.goback{
+    height: 27px;
+    width: 84px;
+}
+div.terminal_edit .button a.goback img{
+	vertical-align: middle;
+}
+/*****************************user add*****************************/
+div.user_add .button input{
+    height: 27px;
+    width: 84px;
+    border:none;
+}
+div.user_add .button input.reset{
+    background: url("../images/useradd_btn2.jpg") no-repeat left top;
+}
+.user_add .role input{
+	margin-left: 7px;
+}
+/*****************************upload template*****************************/
+.user_list td a{
+	margin: 0 5px;
+}
+/*****************************template list*****************************/
+.t_list{
+	line-height: 20px;
+	border-bottom: 1px solid #C9C9C9;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 6px 0 10px 15px;
+}
+.t_list input{
+	margin-right: 3px;
+	margin-left: 10px;
+}
+.t_list span{
+	vertical-align: 1px;
+}
+div.t_list_table table{
+	font-size: 15px;
+}
+div.t_list_table table td span{
+	color: #152BB4;
+	font-weight: bold;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+div.t_list_table table td img{
+	vertical-align: middle;
+}
+div.t_list_table table td.edit a{
+	margin-left: 8px;
+}
+/*****************************upload template*****************************/
+div.tables .upload_w{
+	border: none;
+}
+div.tables table td.upload_tpl{
+    text-align: left;
+}
+.upload_w table td.upload_tpl input.file{
+    left: 130px;
+}
+.upload_w table td.upload_tpl b{
+	margin-left: 8px;
+}
+.upload_w div.button{
+	margin: 12px 0 8px 0;
+}
+.upload_w .button .reset{
+	background: url("../images/useradd_btn2.jpg") no-repeat left top;
+    border: none;
+    cursor: pointer;
+}
+/*****************************sys logs*****************************/
+.logs_s input.submit{
+    width: 80px;
+}
+.logs_s input.reset{
+	width: 80px;
+	height: 27px;
+	background: url("../images/logs_btn2.jpg") no-repeat left top;
+    border: none;
+    cursor: pointer;
+}
+/*****************************sys set*****************************/
+#page .note{
+    position: absolute;
+    text-align: left;
+    left: 5px;
+    top: 18px
+}
+.note img{
+	margin-left: 6px;
+}
+/*****************************manager*****************************/
+.manager_s img{
+	vertical-align: middle;
+}
+.manager_s input.time{
+	width: 150px;
+	height: 20px;
+	background-color: #EAEAEA;
+	font-family: Arial;
+	font-weight: bold;
+	border: none;
+	padding: 1px 4px;
+	margin: 4px;
+}
+.manager{
+	padding: 0 0 4px 4px;
+}
+.manager a{
+	margin-right: 10px;
+}
+.manager_w table th b{
+	display: block;
+	color: #FE0003;
+	font-size: 13px;
+	font-weight: 100;
+}
+/*****************************backup*****************************/
+.backup_w{
+	font-size: 13px;
+	padding-top: 10px;
+	margin-bottom: 38px;
+}
+.backup_w span{
+	padding-left: 4px;
+}
+.backup_w input{
+	vertical-align: middle;
+}
+.backup_w input.text{
+	width: 348px;
+	height: 25px;
+	background: url("../images/input_bg.jpg") repeat-x scroll left top;
+	border: 1px solid #C9C9C9;
+}
+.backup_w .explain{
+	background: none;
+	padding: 0;
+	margin-top: 15px;
+}
+.backup_w .explain p{
+	text-indent: 0;
+}
+.backup_w .img{
+	width: 62px;
+	height: 26px;
+	border: none;
+	background: url("../images/upload_btn1.jpg") no-repeat left top;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.backup_w2{
+	margin: 0;
+}
+.backup_w2 .explain{
+	margin-bottom: 4px;
+}
+.backup{
+	padding-top: 8px;
+}
+/*****************************terminal Choose*****************************/
+#choose{
+	margin: 15px 13px;
+}
+#choose .c_radio{
+	font-size: 13px;
+	padding: 8px 0 8px 8px;
+}
+.c_radio input{
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+.c_radio #groupdown{
+	margin-left: 6px;
+}
+#choose table td.t_left{
+	text-align: left;
+	padding-left: 28px;
+}
+#choose table td.g_left{
+	text-align: left;
+	padding: 3px 10px;
+}
+#choose table td.g_left span{
+	display: inline-block;
+	color: #4B6870;
+	padding: 4px 2px;
+	border: 1px solid #3099DA;
+	cursor: pointer;
+	margin: 3px 0 3px 5px;
+	font-weight: bold;
+}
+#choose .c_btn{
+	position: relative;
+	padding: 16px 0 12px 0;
+}
+#choose .del{
+	position: absolute;
+	left: 3px;
+	top: 19px;
+}
+/*****************************role add*****************************/
+#role .user_add td input{
+	vertical-align: -2px;
+	margin-right: 4px;
+	margin-left: 34px;
+}
+#role .user_add td.s_title input{
+	margin-left: 0px;
+}
+#role .user_add td input.first{
+	margin-left: 0px;
+}
+#role .user_add td.r_name input{
+	margin-left: 0px;
+}
+#role .user_add td.r_name{
+	color: #1821AA;
+	font-weight: bold;
+	font-size: 14px;
+}
+.tempkate_add{
+	width:853px;
+	height:566px;
+	background: #FDD892;
+	margin-bottom: 15px;
+}
+.tempkate_add li{
+	float:left;
+	list-style-type:none;
+	margin: 4px 0 0 4px;
+	background: #3F342F;
+	width:208px;
+	position: relative;
+}
+.tempkate_add li .select{
+	width:100%;
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+	text-align: center;
+	display: none;
+}
+.tempkate_add li .select img{
+	width:44px;
+	height:22px;
+	margin:0 8px;
+	cursor: pointer;
+}
+.tempkate_add li.four{
+	height:265px;
+	width:196px;
+	padding: 6px;
+}
+.tempkate_add li.four div.food{
+	width: 196px;
+	height: 140px;
+	padding:0px;
+}
+.tempkate_add li.four div.food img{
+	width: 196px;
+	height: 100%;
+}
+.tempkate_add li.four img.border{
+	width: 208px;
+	height: 152px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.tempkate_add li.four label{
+	position: absolute;
+	left: 12px;
+	top: 120px;
+	font-size: 20px;
+	color:#fff;
+}
+.tempkate_add li.four span{
+	width:100%;
+	color: yellow;
+	font-size: 24px;
+	margin: 0;
+	height:38px;
+	line-height: 38px;
+	font-weight: 600;
+	display: block;
+}
+.tempkate_add li.four span.num{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 22px;
+	display: inline;
+}
+.tempkate_add li.four span#foodnum{
+	color:#7EF500;
+}
+.tempkate_add li.four img.allmoney{
+	width: 196px;
+	height: 45px;
+	position: absolute;
+	bottom: 6px;
+	right:8px;
+}
+.tempkate_add li.four span#allmoney{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 22px;
+	width: 96px;
+	height: 40px;
+	position: absolute;
+	bottom: 8px;
+	right:10px;
+	text-align: center;
+	color:#fff;
+}
+.tempkate_add li.eight{
+	width:200px;
+	height:129px;
+	padding: 4px;
+}
+.tempkate_add li.eight div.food{
+	width: 115px;
+	height: 129px;
+	padding:0px;
+}
+.tempkate_add li.eight div.food img{
+	width: 115px;
+	height: 100%;
+}
+.tempkate_add li.eight img.border{
+	width: 123px;
+	height: 137px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.tempkate_add li.eight label{
+	position: absolute;
+	left: 10px;
+	top: 110px;
+	font-size: 18px;
+	color:#fff;
+}
+.tempkate_add li.eight span{
+	width:50%;
+	color: yellow;
+	font-size: 18px;
+	margin: 0;
+	height:25px;
+	line-height: 25px;
+	font-weight: 500;
+	position: absolute;
+	left: 125px;
+	top:6px;
+}
+.tempkate_add li.eight span.foodnumlocation{
+	position: absolute;
+	left: 125px;
+	top:35px;
+}
+.tempkate_add li.eight span.num{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 18px;
+	display: inline;
+	position: relative;
+	left:0;
+	top:0;
+}
+.tempkate_add li.eight span#foodnum{
+	color:#7EF500;
+}
+.tempkate_add li.eight img.allmoney{
+	width: 84px;
+	height: 35px;
+	position: absolute;
+	bottom: 4px;
+	right:2px;
+}
+.tempkate_add li.eight span#allmoney{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 18px;
+	width: 40px;
+	height: 30px;
+	position: absolute;
+	top: 103px;
+	left:165px;
+	text-align: center;
+	color:#fff;
+}
+.tempkate_add li.twelve{
+	width:202px;
+	height:84px;
+	padding: 3px;
+}
+.tempkate_add li.twelve div.food{
+	width: 100px;
+	height: 84px;
+	padding:0px;
+}
+.tempkate_add li.twelve div.food img{
+	width: 100px;
+	height: 100%;
+}
+.tempkate_add li.twelve img.border{
+	width: 106px;
+	height: 90px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.tempkate_add li.twelve label{
+	position: absolute;
+	left: 8px;
+	top: 70px;
+	font-size: 14px;
+	color:#fff;
+}
+.tempkate_add li.twelve span{
+	width:55%;
+	color: yellow;
+	font-size: 16px;
+	margin: 0;
+	height:20px;
+	line-height: 20px;
+	font-weight: 400;
+	position: absolute;
+	left: 110px;
+	top:4px;
+}
+.tempkate_add li.twelve span.foodnumlocation{
+	position: absolute;
+	left: 110px;
+	top:25px;
+}
+.tempkate_add li.twelve span.num{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 16px;
+	display: inline;
+	position: relative;
+	left:0;
+	top:0;
+}
+.tempkate_add li.twelve span#foodnum{
+	color:#7EF500;
+}
+.tempkate_add li.twelve img.allmoney{
+	width: 98px;
+	height: 30px;
+	position: absolute;
+	bottom: 4px;
+	right:4px;
+}
+.tempkate_add li.twelve span#allmoney{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 14px;
+	width: 45px;
+	height: 20px;
+	position: absolute;
+	top: 62px;
+	left:153px;
+	text-align: center;
+	color:#fff;
+}
+.tempkate_add li.sixteen{
+	width:204px;
+	height:62px;
+	padding: 2px;
+}
+.tempkate_add li.sixteen div.food{
+	width: 90px;
+	height: 62px;
+	padding:0px;
+}
+.tempkate_add li.sixteen div.food img{
+	width: 90px;
+	height: 100%;
+}
+.tempkate_add li.sixteen img.border{
+	width: 94px;
+	height: 66px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.tempkate_add li.sixteen label{
+	position: absolute;
+	left: 4px;
+	top: 52px;
+	font-size: 10px;
+	color:#fff;
+}
+.tempkate_add li.sixteen span{
+	width:60%;
+	color: yellow;
+	font-size: 14px;
+	margin: 0;
+	height:16px;
+	line-height: 16px;
+	font-weight: 300;
+	position: absolute;
+	left: 100px;
+	top:2px;
+}
+.tempkate_add li.sixteen span.foodnumlocation{
+	position: absolute;
+	left: 100px;
+	top:20px;
+}
+.tempkate_add li.sixteen span.num{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 14px;
+	display: inline;
+	position: relative;
+	left:0;
+	top:0;
+}
+.tempkate_add li.sixteen span#foodnum{
+	color:#7EF500;
+}
+.tempkate_add li.sixteen img.allmoney{
+	width: 106px;
+	height: 25px;
+	position: absolute;
+	bottom: 2px;
+	right:4px;
+}
+.tempkate_add li.sixteen span#allmoney{
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 14px;
+	width: 45px;
+	height: 20px;
+	position: absolute;
+	top: 42px;
+	left:150px;
+	text-align: center;
+	color:#fff;
+}
+
+/*main*/
+#detectpage{
+	width: 100%;
+	margin: 5px auto;
+	/*
+	background: url("../images/content_bg_conter.jpg") repeat left top;
+	*/
+}
+/*list*/
+#detectpage .list{
+	width: 98%;
+	padding: 10px 4px 0 4px;
+	overflow: hidden;
+}
+#detectpage .list ul{
+	float: left;
+	width: 100%;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 15px;
+}
+#detectpage .list ul li{
+	float: left;
+	width: 288px;
+	background-color: #000;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	border: 2px solid #7D8588;
+}
+#detectpage .list ul li a{
+	display: block;
+	width: 288px;
+	height: 288px;
+	border-bottom: 1px solid #C1BFC0;
+	margin-bottom: 10px;
+	line-height: 300px;
+	text-align: center;
+	color: red;
+	background-color: #fff;
+	font-size: 32px;
+}
+#detectpage .list ul li a.order{
+	background-color: #000;
+}
+#detectpage .list ul li a.cook{
+	background-color: #000;
+}
+#detectpage .list ul li a img.cook{
+	width:288px;
+	height:162px;
+	margin-top: 62px;
+}
+#detectpage .list ul li a img.order{
+	width:162px;
+	height:288px;
+}
+#detectpage .list ul li div{
+	width: 288px;
+	padding: 3px 1px;
+	line-height: 20px;
+	overflow: hidden;
+}
+#detectpage .list ul li div span{
+	font-size: 13px;
+}
+#detectpage .list ul li div span.yellow{
+	color: #E9FF07;
+}
+#detectpage .list ul li div span.red{
+	color: #FB0100;
+}
+

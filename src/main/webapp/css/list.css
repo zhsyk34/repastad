@@ -1,0 +1,155 @@
+/*數據列表頁面樣式 */ /*頭部標題*/ /*
+div.head_title {
+	height: 30px;
+	line-height: 30px;
+	background: url("../sysimg/head.jpg") repeat-x left top;
+}
+
+div.head_title h3 {
+	padding-left: 60px;
+	background: url("../sysimg/head_left.jpg") no-repeat left top;
+}
+
+div.head_title h3 div {
+	line-height: 27px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	background: url("../sysimg/head_right.jpg") no-repeat right top;
+}
+*/ /*頭部内容*/ /*
+div.head_content {
+	height: 34px;
+	padding: 6px 0 7px 34px;
+	border: 1px solid #C9C9C9;
+	border-top: none;
+	margin-bottom: 13px;
+	vertical-align: middle;
+}
+
+
+*/ /*主體標題*/
+div.title {
+	height: 45px;
+	line-height: 45px;
+	background: url("../sysimg/list/title.jpg") repeat-x left top;
+}
+
+div.title h3 {
+	padding-left: 60px;
+	background: url("../sysimg/list/title_left.jpg") no-repeat left top;
+}
+
+div.title h3 div {
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	background: url("../sysimg/list/title_right.jpg") no-repeat right top;
+}
+
+/*主體内容*/
+div.content {
+	margin-bottom: 20px;
+	border: 1px solid #C9C9C9;
+	border-top: none;
+}
+
+div.content div {
+	padding: 6px 0px 10px 15px;
+	/*
+	border-bottom: 1px solid #C9C9C9;
+	margin-bottom: 10px;
+	*/
+}
+
+div.content img {
+	height: 33px;
+	width: 115px;
+	padding: 5px 0 5px 20px;
+}
+
+div.content table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Tahoma;
+	color: #02070B;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+div.content table tr:hover {
+	background-color: #F0F5FB;
+}
+
+div.content table th {
+	font-size: 15px;
+	font-weight: 400;
+	border: 1px solid #FFF;
+	background-color: #E7F3FF;
+	padding: 2px 0;
+}
+
+div.content table td {
+	font-size: 14px;
+	font-weight: 300;
+	border: 2px solid #FFF;
+	padding: 1px 3px;
+}
+
+/*編輯時*/
+div.content table.edit {
+	
+}
+
+div.content table.edit td {
+	padding-left: 15px;
+	text-align: left;
+	height: 50px;
+}
+
+div.content table.edit td b {
+	color: red;
+}
+
+div.content table.edit td input.text {
+	width: 380px;
+	height: 33px;
+	line-height: 33px;
+	border: 1px solid #ACCCFB;
+	font-size: 13px;
+	padding: 1px 2px;
+	vertical-align: middle;
+}
+
+div.content table td img {
+	width: 21px;
+	height: 21px;
+}
+
+/*查詢input*/
+.keyword {
+	width: 166px;
+	height: 27px;
+	line-height: 27px;
+	border: 1px solid #C9C9C9;
+	padding: 2px 5px;
+	vertical-align: middle;
+	background-image: url("../sysimg/keyword.jpg");
+}
+
+div.content .search {
+	width: 84px;
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+/* */
+.button input {
+	margin-right: 40px;
+}
+
+.desc {
+	margin-left: 15px;
+	color: red;
+}

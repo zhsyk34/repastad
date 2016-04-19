@@ -1,0 +1,194 @@
+@charset "utf-8";
+body,td,th {
+	font-size: 12px;
+}
+
+body {
+	font-size: 12px;
+	color: #000000;
+	background-color: #CAD7F7;
+	scrollbar-face-color: #f6f6f6;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-shadow-color: #cccccc;
+	scrollbar-3dlight-color: #cccccc;
+	scrollbar-arrow-color: #330000;
+	scrollbar-track-color: #fefefe;
+	scrollbar-darkshadow-color: #ffffff;
+}
+
+.button {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; COLOR: #333333; PADDING-TOP: 1px; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: "??‥??"; HEIGHT: 19px;
+	background-color: #EEEEEE;
+}
+input {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Text-decoration: None; Border-top-width: 1px; Border-left-width: 1px; Font-size: 12px; Border-bottom-width: 1px; Border-right-width: 1px
+}
+option {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Text-decoration: None; Border-top-width: 1px; Border-left-width: 1px; Font-size: 12px; Border-bottom-width: 1px; Border-right-width: 1px
+}
+textarea {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Text-decoration: None; Border-top-width: 1px; Border-left-width: 1px; Font-size: 12px; Border-bottom-width: 1px; Border-right-width: 1px
+}
+select {
+	Font-family:Verdana, Arial, Helvetica, Sans-serif,宋体; Border-top-width: 1px; Border-left-width: 1px; Font-size: 12px; Border-bottom-width: 1px; Border-right-width: 1px
+}
+.td_caption {
+	background-color: #5A86D6;
+	color: White;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	background-image: url(../images/caption_bg.gif);
+}
+
+.table_big {
+	border: 1px solid #638BC5;
+	background-color: #FFFFFF;
+}
+
+.td_left{
+	text-align:left;
+	background-color: #E3F0FF;
+	font-size: 12px;
+	color: #000000;
+height: 16px;
+}
+
+.td_center{
+	text-align:center;
+	background-color: #E7EFFF;
+	font-size: 12px;
+	color: #000000;
+}
+
+.td_right{
+	text-align:right;
+	background-color: #E7EFFF;
+	font-size: 12px;
+	color: #000000;
+		height: 25px;
+
+}
+
+.td_topright{
+	text-align:right;
+	background-color: #E7EFFF;
+	vertical-align: top;
+	font-size: 12px;
+}
+
+.tipdialog{
+	text-align:left;
+	font-size: 12px;
+	color: #000000;
+}
+
+.tipcolor{
+	font-size: 14px;
+	color: #FF0000;
+}
+/*按鈕樣式開始*/
+
+/*按鈕樣式結束*/
+
+a{
+	font-size: 12px;
+	color: #215DC6;
+	TEXT-DECORATION: none;
+
+}
+
+a:hover {
+	font-size: 12px;
+	color: #215DC6;
+	text-decoration: underline;
+}
+
+/*
+以下為自动给表单上的文本框加上动态效果的相關CSS
+*/
+@import 'html.css';
+
+/*.form
+{
+    text-align:left;
+    width:500px;
+    margin:40px auto;
+    background:#FFF;
+    border:1px solid #CCC;
+    padding:10px;
+    height:500px;
+}
+*/
+.form input{font-size:12px; font-family:vVerdana, Geneva, Arial, Helvetica, sans-serif;}
+.form input.text,textarea.text{
+    padding:2px 4px;
+	background:#E7EFFF;
+    border:0px solid #DDD;
+    color:#666666;
+}
+
+.form input.focus,textarea.focus{
+    padding:2px 4px;
+    background:#F5FEEB;
+    border:1px solid #ccc;
+    color:#000000;
+}
+
+.form div {
+        border:1px solid #E7EFFF;
+        width:123px;
+        height:17px;
+        clip:rect(0px,18px,22px,0px);
+        overflow:hidden;
+}
+
+.form select {
+        position:relative;
+        left:-2px;
+        top:-2px;
+        font-size:12px;
+        width:125px;
+        line-height:18px;border:0px;
+		background:#E7EFFF;
+        color:#666666;
+}
+
+
+.form h2{
+    font-size:32px;
+    color:#A8DF00;
+    font-weight:bold;
+    font-style:italic;
+    border-bottom:2px dashed #CCC;
+    padding:6px;
+}
+
+
+.form ul {
+    list-style-type:none;
+    margin:0;
+    padding:8px;
+}
+
+.form ul li {
+    line-height:30px;
+    padding:2px 0;
+    clear:both;
+}
+
+.form ul li label {
+    width:140px;
+    text-align:right;
+    font-weight:bold;
+    display:block;
+    float:left;
+    margin-right:5px;
+    color:#555;
+}
+
+.form ul li label span{color:red;margin-right:2px; line-height:24px;}
+
+/*
+結束自动给表单上的文本框加上动态效果的相關CSS代碼
+*/

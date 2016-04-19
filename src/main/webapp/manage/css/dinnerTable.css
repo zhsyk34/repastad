@@ -1,0 +1,31 @@
+.mod,.del {
+	cursor: pointer;
+}
+
+#search {
+	font-size: 15px;
+}
+
+#begin,#end {
+	width: 60px;
+}
+
+.desc {
+	margin-left: 15px;
+	color: red;
+}
+
+#batch {
+	display:inline-block;
+	height: 27px;
+	line-height:27px;
+	width:80px;
+	text-align:center;
+	border-radius: 3px;
+	border: 1px solid gray;
+	cursor: pointer;
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+

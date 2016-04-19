@@ -1,0 +1,52 @@
+ul li {
+	float: left;
+	margin-left: 12px;
+	height: 28px;
+	line-height: 28px;
+}
+
+#add {
+	margin-left: 12px;
+}
+
+#desc{
+	margin-left: 10px;
+	color:#226618;
+}
+
+/**/
+.dialog {
+	width: 420px;
+}
+
+.dialog input {
+	height: 20px;
+	width: 44px;
+	padding: 1px 3px;
+}
+
+.page {
+	float: right;
+	padding: 5px 2px 0 0;
+}
+
+
+td.rule span{
+	display:inline-block;
+	color:#00f;
+	width:60px;
+	font-size:15px;
+	text-align: center;
+}
+.use .linkbutton{
+	margin-left:16px;
+	padding:2px 5px;
+}
+
+.used{
+	color:#0E680E;
+}
+.unused{
+	color:#5C5757;
+}
+

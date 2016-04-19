@@ -1,0 +1,28 @@
+.defaultBar {
+	height: 5px;
+	background-color: #FFFFE0;
+	border: 1px solid #A9C9E2;
+	position: relative;
+}
+
+.defaultCompleted {
+	height: 5px; /*=bar height*/
+	background-color: #7d9edb;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.defaultSlider {
+	display: block;
+	height: 15px;
+	background-color: #E6E6FA;
+	border: 1px solid #A5B6C8;
+	cursor: pointer;
+	position: absolute;
+	top: -6px; 
+}
+
+.defaultHover {
+	background-color: #000080;/*TODO*/
+}

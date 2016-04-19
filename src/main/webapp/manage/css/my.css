@@ -1,0 +1,149 @@
+@charset "utf-8";
+.digg {
+	text-align:right;
+	margin-top:10px;
+	line-height:2em;
+	padding:5px 0;
+	clear:both;
+	
+}/*
+.digg a {
+	border:1px #e8e6d3 solid;
+	padding:5px 8px;
+	margin:0 2px;
+	text-decoration:none;
+	color:#333;
+	
+}
+.digg a:hover {
+	border:1px solid #2189d0;
+	color:#2189d0;
+	
+}
+.digg a:active {
+	border:1px solid #2189d0;
+	color:#333;
+	
+}
+.digg span.current {
+	border:1px solid #2189d0;
+	padding:5px 8px;
+	font-weight:bold;
+	color:#2189d0;
+	
+}
+.digg span.disabled {
+	border:1px solid #eee; 
+	padding:5px 8px; 
+	color:#ddd;
+
+}*/
+.mytab{
+	background:#ffffff;
+	border: 1px solid #638BC5;
+	
+}
+.mytab td{
+	height:23px;	
+}
+
+
+
+.mytab tr {
+	background-color: #E3F0FF;
+	font-size: 12px;
+	color: #000000;
+/*BORDER-bottom: #0099CC 1px groove;
+BORDER-left: #0099CC 1px groove;
+BORDER-right: #0099CC 1px groove;*/
+	/*height: 25px;*/
+}
+/*
+.mytab td {
+
+BORDER-bottom: #0099CC 1px groove;
+BORDER-left: #0099CC 1px groove;
+BORDER-right: #0099CC 1px groove;
+height: 30px;
+}*/
+
+.mytab  th{
+BORDER-right: rgb(0,0,0) 1px groove;
+height: 30px;
+}
+.mytab1 td {
+BORDER-top: #f7fde6 1px groove;
+BORDER-bottom:#f7fde6 1px groove;
+BORDER-left:#f7fde6 1px groove;
+BORDER-right:#f7fde6 1px groove;
+height: 30px;
+
+}
+
+.mytab1  th{
+BORDER-right: rgb(0,0,0) 1px groove;
+height: 30px;
+}
+.mytab2 td {
+BORDER-top:#0099CC 1px groove;
+BORDER-bottom:#0099CC 1px groove;
+BORDER-left:#0099CC 1px groove;
+BORDER-right:#0099CC 1px groove;
+height: 30px;
+
+}
+
+.mytab2  th{
+BORDER-top: #0099CC 1px groove;
+BORDER-bottom:#0099CC 1px groove;
+BORDER-left:#0099CC 1px groove;
+BORDER-right: #0099CC 1px groove;
+height: 30px;
+}
+
+.btn_send{
+	background:url(../miracle/images/send.gif) no-repeat;
+	width:116px;
+	height:30px;
+	text-align:center;
+	border:0 none;
+	cursor:pointer;
+	line-height:30px;
+	margin:0 5px;
+	color:#19556e;
+}
+.btn_reset{
+	background:url(../miracle/images/btn_send.gif) no-repeat;
+	width:116px;
+	height:30px;
+	text-align:center;
+	border:0 none;
+	cursor:pointer;
+	line-height:30px;
+	color:#828282;
+}
+
+.floatright{
+	float:right;
+}
+.floatleft{
+	float:left;
+}
+
+.mytab tr.tb_head {
+	/*background: #0099CC;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: bold;*/
+	background-color: #5A86D6;
+	color: White;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	background-image: url(../images/caption_bg.gif);	
+	height:18px;
+ }
+ 
+.mytab tr.tb_head td {
+		height:18px;
+	}

@@ -1,0 +1,123 @@
+body {margin: 0px;background-image: url(../images/di.jpg);}
+td {font-family: "���^";
+	font-size: 12px;}
+.login {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #90A2AE;
+	border-right-color: #90A2AE;
+	border-bottom-color: #90A2AE;
+	border-left-color: #90A2AE;
+}
+.12p_1{
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #3E5462;
+	text-decoration: none;}
+.12p_1_3{
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;}	
+a.a12p_brue:link {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #3E5462;
+	text-decoration: none;
+}
+a.a12p_brue:visited {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #3E5462;
+	text-decoration: none;
+}
+a.a12p_brue:hover {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #0080C0;
+	text-decoration: none;
+}
+a.a12p_brue:active {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #0080C0;
+	text-decoration: none;
+}
+a:link {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #0080C0;
+	text-decoration: none;
+}
+a:active {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #0080C0;
+	text-decoration: none;
+}
+.pan1_bt {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: bold;
+}
+.pan1_bt1 {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.pan1_line{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #C5CED5;
+	border-bottom-color: #C5CED5;
+	border-left-color: #C5CED5;
+}
+.pan1_bdline{
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-left-color: #808080;
+	border-top-width: 1px;
+	border-top-color: #808080;
+}
+.pan1_can {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: bold;
+	color: #3B5564;}
+.pan1_can {
+	font-family: "���^";
+	font-size: 12px;
+	font-weight: normal;
+	color: #768E9E;}
+	

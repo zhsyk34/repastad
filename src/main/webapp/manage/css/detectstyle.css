@@ -1,0 +1,105 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, input, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, select, table, th, tr, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "PMingLiU",Verdana,Arial,PMingLiU,Helvetica,sans-serif,"宋体";
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+ul{
+	list-style:none;
+}
+img {
+    border: 0 none;
+    vertical-align: top;
+}
+body{
+	background-color: #B1EAFE;
+}
+#wrapper{
+	width: 1024px;
+	margin: 0 auto;
+}
+/*header*/
+#wrapper #header{
+	height: 58px;
+	padding-top: 125px;
+	background: url("../images/top.jpg") no-repeat left top;
+	margin-bottom: 21px;
+}
+#header .h_wrap{
+	height: 58px;
+	line-height: 58px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #3189f6;
+}
+.h_wrap div{
+	float: left;
+	width: 512px;
+}
+.h_wrap .select{
+	width: 497px;
+	text-align: right;
+	padding-right: 15px;
+}
+.select select{
+	height: 21px;
+	line-height: 21px;
+	font-size: 15px;
+}
+.select option{
+	padding-right: 10px;
+}
+.number input{
+	width: 114px;
+	height: 19px;
+	line-height: 19px;
+	border: 1px solid #717576;
+	padding: 1px 2px;
+	font-size: 15px;
+}
+/*main*/
+#wrapper #main{
+	width: 980px;
+	margin: 0 auto 17px;
+	border: 1px solid #FAFBFF;
+	padding-top: 29px;
+	background: #93E2FF url("../images/main_bg.jpg") no-repeat center bottom;
+	border-radius: 8px;
+}
+/*list*/
+#main .list{
+	width: 956px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.list ul{
+	width: 1024px;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 33px;
+	clear: both;
+}
+.list ul li{
+	float: left;
+	width: 219px;
+	background-color: #000;
+	margin-right: 21px;
+	margin-bottom: 33px;
+	border: 2px solid #727270;
+}
+.list ul li a{
+	display: block;
+	width: 219px;
+	height: 178px;
+	margin-bottom: 16px;
+}
+.list ul li div{
+	padding: 5px 3px;
+	line-height: 22px;
+}

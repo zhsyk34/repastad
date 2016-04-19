@@ -1,0 +1,74 @@
+BODY {
+	color:#030E2A;
+	font-size:12px;
+	FONT-FAMILY: "PMingLiU", "Verdana", "Helvetica", "sans-serif";
+	text-decoration: underline;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #2B5C7D;
+}
+a:link {
+	color: #030E2A;
+	text-decoration: underline;
+}
+a:visited {
+	color: #030E2A;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FF6600;
+}
+a:active {
+	color: #030E2A;
+	text-decoration: underline;
+}
+.news {
+	color:#030E2A;
+	font-size:12px;
+	FONT-FAMILY: "PMingLiU", "Verdana", "Helvetica", "sans-serif";
+	text-decoration: underline;
+	line-height: 20px;
+}
+a.news:link {
+	color: #030E2A;
+	text-decoration: underline;
+}
+a.news:visited {
+	color: #030E2A;
+	text-decoration: underline;
+}
+a.news:hover {
+	color: #065676;
+	text-decoration: underline;
+}
+a.news:active {
+	color: #030E2A;
+	text-decoration: underline;
+}
+.login {
+	height: 21px;
+	font-size:12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 148px;
+	border: 1px solid #3B75AF;
+	line-height: 17px;
+}
+.login-02 {
+	height: 21px;
+	font-size:12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 98px;
+	border: 1px solid #3B75AF;
+	line-height: 17px;
+}
+.tbg {
+	background-image: url(images/login_01.gif);
+	background-repeat: no-repeat;
+}
+
+#logo{
+	width:416px;
+	 height:33px;
+}

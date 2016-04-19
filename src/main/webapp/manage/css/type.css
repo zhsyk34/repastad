@@ -1,0 +1,23 @@
+.edit table {
+	width: 100%;
+	font-size: 14px;
+}
+
+.edit td {
+	height: 33px;
+	line-height: 33px;
+	padding: 1px 2px;
+	vertical-align: middle;
+}
+
+.edit td input {
+	height: 24px;
+	widht: 60%;
+	padding: 1px 0 1px 2px;
+}
+
+.dialog {
+	width: 400px;;
+	background-color: #E7F3FF;
+}
+

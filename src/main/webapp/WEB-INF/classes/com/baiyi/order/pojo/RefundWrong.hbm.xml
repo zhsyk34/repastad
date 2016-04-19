@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.baiyi.order.pojo">
+	<class name="RefundWrong" table="refundWrong" lazy="false">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="sno" type="java.lang.String" />
+		<property name="terminalId" type="java.lang.String" />
+		<property name="orderId" type="java.lang.String" not-null="false" />
+		<property name="reason" type="java.lang.Integer" />
+		<property name="type" type="java.lang.Integer" />
+		<property name="amount" type="java.lang.Double" />
+		<property name="happenTime" type="java.util.Date" not-null="false" />
+		<property name="isGet" type="java.lang.Integer" />
+		<property name="dealTime" type="java.util.Date" />
+		<property name="adminId" type="java.lang.Integer" />
+		<property name="addTime" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

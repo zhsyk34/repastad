@@ -1,0 +1,111 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, input, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, select, table, th, tr, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "PMingLiU",Verdana,Arial,PMingLiU,Helvetica,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+ul{
+	list-style:none;
+}
+img {
+    border: 0 none;
+    vertical-align: top;
+}
+html, body{
+	width: 100%;
+	background: #1E92FF url("../images/body_bg.jpg") repeat-x left top;
+}
+#wrapper{
+	width: 1002px;
+	margin: 0 auto;
+}
+/*header*/
+#wrapper #header{
+	height: 39px;
+	padding-top: 21px;
+}
+#header .h_wrap{
+	float: right;
+	font-size: 17px;
+	font-weight: bold;
+	color: #3189f6;
+}
+.h_wrap div{
+	float: left;
+}
+.h_wrap .select{
+	padding-right: 15px;
+}
+.select select{
+	height: 21px;
+	line-height: 21px;
+	font-size: 15px;
+}
+.select option{
+	padding-right: 6px;
+}
+.number input{
+	width: 114px;
+	height: 19px;
+	line-height: 19px;
+	border: 1px solid #C4C4C4;
+	padding: 1px 2px;
+	font-size: 15px;
+}
+/*main*/
+#wrapper #main{
+	width: 994px;
+	margin: 0 auto 9px;
+	background: url("../images/content_bg_conter.jpg") repeat-y left top;
+}
+#main .l_wrap{
+	background: url("../images/content_bg_bottom.jpg") no-repeat left bottom;
+}
+/*list*/
+.l_wrap .list{
+	width: 979px;
+	padding: 13px 8px 0 8px;
+	overflow: hidden;
+	background: url("../images/content_bg_top.jpg") no-repeat left top;
+}
+.list ul{
+	float: left;
+	width: 988px;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 15px;
+}
+.list ul li{
+	float: left;
+	width: 185px;
+	background-color: #000;
+	margin-right: 8px;
+	border: 2px solid #7D8588;
+}
+.list ul li a{
+	display: block;
+	width: 185px;
+	height: 248px;
+	border-bottom: 1px solid #C1BFC0;
+	margin-bottom: 10px;
+}
+.list ul li div{
+	width: 183px;
+	padding: 5px 1px;
+	line-height: 22px;
+}
+.list ul li div span{
+	font-size: 13px;
+}
+.list ul li div span.yellow{
+	color: #E9FF07;
+}
+.list ul li div span.red{
+	color: #FB0100;
+}

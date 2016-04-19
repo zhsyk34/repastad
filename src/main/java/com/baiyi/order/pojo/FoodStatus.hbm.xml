@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.baiyi.order.pojo">
+	<class name="FoodStatus" lazy="false" dynamic-insert="true" dynamic-update="true">
+		<id name="id" type="java.lang.Integer">
+			<generator class="native" />
+		</id>
+		<property name="foodId" type="java.lang.Integer" not-null="true" />
+		<property name="terminalId" type="java.lang.Integer" not-null="true" />
+		<property name="pattern" type="java.lang.Integer" not-null="true" />
+		<property name="unit" type="java.lang.Integer" />
+		<property name="count" type="java.lang.Integer" />
+		<property name="send" type="java.lang.Integer" />
+		<property name="discount" type="java.lang.Double" />
+		<property name="percent" type="java.lang.Integer" />
+		<property name="begin" type="java.lang.String"  />
+		<property name="end" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

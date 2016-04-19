@@ -1,0 +1,82 @@
+.page {
+	width: 100%;
+	text-align: right;
+	padding: 18px 0;
+}
+
+.page ul {
+	line-height: 24px;
+	list-style: none;
+}
+
+.page ul li {
+	display: inline;
+	font-size: 12px;
+	line-height: 22px;
+	margin: 0 3px;
+	cursor: pointer;
+	padding: 5px 0;
+	color: #040404;
+}
+
+.page ul li.actfirst {
+	padding-left: 21px;
+	background: url("../img/page/first.jpg") no-repeat left 2px;
+}
+
+.page ul li.disfirst {
+	padding-left: 21px;
+	background: url("../img/page/first.jpg") no-repeat left 2px;
+	cursor: auto;
+	color: #808080;
+}
+
+.page ul li.actprev {
+	padding-left: 21px;
+	background: url("../img/page/prev.jpg") no-repeat left 3px;
+}
+
+.page ul li.disprev {
+	padding-left: 21px;
+	background: url("../img/page/prev.jpg") no-repeat left 3px;
+	cursor: auto;
+	color: #808080;
+}
+
+.page li input{
+	margin:0 5px;
+	width:24px;
+	height: 16px;
+	text-align: center;
+	padding: 2px;
+	border:1px solid #7F9DB9;
+}
+
+.page li select{
+	border:1px solid #7F9DB9;
+	width:30px;
+}
+
+.page ul li.actnext {
+	padding-right: 21px;
+	background: url("../img/page/next.jpg") no-repeat right 3px;
+}
+
+.page ul li.disnext {
+	padding-right: 21px;
+	background: url("../img/page/next.jpg") no-repeat right 3px;
+	cursor: auto;
+	color: #808080;
+}
+
+.page ul li.actlast {
+	padding-right: 21px;
+	background: url("../img/page/last.jpg") no-repeat right 3px;
+}
+
+.page ul li.dislast {
+	padding-right: 21px;
+	background: url("../img/page/last.jpg") no-repeat right 3px;
+	cursor: auto;
+	color: #808080;
+}

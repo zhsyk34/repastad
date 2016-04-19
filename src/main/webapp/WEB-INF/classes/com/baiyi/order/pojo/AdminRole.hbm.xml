@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.baiyi.order.pojo.AdminRole" table="adminRole"
+		lazy="false">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="adminId" type="java.lang.Integer">
+			<column name="adminId" />
+		</property>
+		<property name="roleId" type="java.lang.Integer">
+			<column name="roleId" />
+		</property>
+	</class>
+</hibernate-mapping>

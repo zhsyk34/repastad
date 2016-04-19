@@ -1,0 +1,69 @@
+/*  2015-11-11 */
+html,body {
+	background-color: transparent;
+	color: #000;
+	line-height: 1.5;
+	font-family: KaiTi, PMingLiU, SimSun, sans-serif, Arial;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+/*inner and outer border*/
+fieldset,img,abbr,acronym {
+	border: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+/*list*/
+ol,ul {
+	list-style: none;
+}
+
+/*table:tables still need {cellspacing=0} in the markup*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption,th {
+	text-align: center;
+}
+
+/**/
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+/**/
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+/*links*/
+:link,:visited {
+	text-decoration: none;
+}
+
+ins {
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}

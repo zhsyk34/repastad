@@ -1,0 +1,158 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+.articleText{
+	background:url('../images/wed-opacity.png');
+	text-align: center;
+	overflow: hidden;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-family: Arial;
+	font-size: 100%;
+}
+.imgarticle{
+	width:100%;
+	height:100%;
+	
+}
+
+
+#wedding{
+	background:url('../images/wed-opacity.png');
+	width: 360px;
+	height: 640px;
+	-moz-user-select: none;
+	cursor: default;
+	position: relative;
+	overflow: hidden;
+}
+#wedding .centre{
+	width: 360px;
+	height: 477px;
+	position: relative;
+	overflow: hidden;
+}
+#wedding .top{
+	width: 360px;
+	height: 52px;
+	position: relative;
+	overflow: hidden;
+}
+#wedding .buttom{
+	width: 360px;
+	height: 111px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+#wedding-text{
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:-1;
+	width: 360px;
+	height: 640px;
+	-moz-user-select: none;
+}
+#wedding-text .centre{
+	background:rgb(184, 34, 22);
+	width: 360px;
+	height: 477px;
+	text-align: center;
+	overflow: hidden;
+}
+#wedding-text .top{
+	background:rgb(184, 34, 22);
+	width: 360px;
+	height: 52px;
+	text-align: center;
+	overflow: hidden;
+}
+#wedding-text .buttom{
+	background:rgb(184, 34, 22);
+	width: 360px;
+	height: 111px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+#movedata{
+	height:640px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.batckvalue{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display:none;
+	cursor: default;
+	
+}
+
+#footer_ul{
+	width: 360px;
+	height: 111px;
+}
+#footer_ul li{
+	width:90px;
+	height:55px;
+	font-size: 18px;
+	float: left;
+	overflow:hidden;
+	position: relative;
+	text-align: center;
+}
+#footer_ul li img{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+#footer_ul li span{
+	font-size:18px;
+	width: 80px;
+	min-height: 27px;
+	line-height: 27px;
+	color: #FFE5B8;
+	position: absolute;
+	left: 2px;
+	top:25px;
+}
+
+.slider{
+	width: 120px;
+	height: 18px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	line-height: 20px;
+	top: -10px;
+	*top:0;
+}
+.slider-line {
+	width: 100%;
+	height: 2px;
+	display: inline-block;
+	background:#0F9BF5;
+	position: relative;
+	left: 0px;
+	top: 8px;
+}
+.slider-flag{
+	width: 3px;
+	height: 80%;
+	display: inline-block;
+	background:#7A0BE2;
+	position: absolute;
+	left: 26px;
+	top: 3px;
+	cursor: hand;
+}

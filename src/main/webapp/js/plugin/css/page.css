@@ -1,0 +1,78 @@
+.page {
+	font-size: 13px;
+	font-family: KaiTi, SimSun, sans-serif, Arial;
+}
+
+.page td {
+	height: 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.page .first,.page .previous,.page .next,.page .last {
+	cursor: pointer;
+}
+
+.page .first div,.page .previous div,.page .next div,.page .last div {
+	width: 20px;
+	height: inherit;
+}
+
+.page .first div {
+	background: url(page/first.jpg) center no-repeat;
+}
+
+.page .previous div {
+	background: url(page/previous.jpg) center no-repeat;
+}
+
+.page .next div {
+	background: url(page/next.jpg) center no-repeat;
+}
+
+.page .last div {
+	background: url(page/last.jpg) center no-repeat;
+}
+
+.page .disabled {
+	color: #808080;
+	cursor: default;
+}
+
+.page .separator {
+	padding: 0 2px;
+}
+
+.page .separator div {
+	height: 17px;
+	border-left: 1px solid #7F9DB9;
+	border-right: 1px solid #FFFFFF;
+}
+
+.page input,.page select {
+	display: inline-table;
+	border: 1px solid #7F9DB9;
+	vertical-align: middle;
+	font-size: 14px;
+	font-family: serif;
+}
+
+.page input {
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.page select {
+	height: 22px;
+	width: 36px;
+}
+
+.page span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 0 2px;
+}

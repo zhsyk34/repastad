@@ -1,0 +1,78 @@
+#search {
+	padding: 6px 0px 10px 15px;
+	border-bottom: 1px solid #C9C9C9;
+	margin-bottom: 10px;
+}
+
+#search tr {
+	text-align: left;
+}
+
+.dealStatus div {
+	padding: 3px;
+}
+
+.dealStatus label {
+	cursor:pointer;
+}
+
+.dealTime {
+	padding-left: 5px;
+}
+
+.noDeal {
+	color: red;
+	
+}
+
+
+.noDeal label{
+margin-left:20px;
+}
+
+.noDeal label.nowDeal {
+	color: 	#000093;
+}
+
+.haveDeal {
+	color: green;
+}
+.haveDeal label{
+	margin:5px 10px 1px 10px;
+}
+.haveDeal label.noneDeal{
+	color: 	#600030;
+}
+.haveDeal label.reDeal{
+	color: 	#424200;
+}
+
+
+
+
+
+#search img {
+	padding: 0;
+	line-height: 27px;
+	vertical-align: middle;
+}
+
+#button input {
+	margin: 0;
+	height: 27px;
+}
+
+#button img {
+	width: 84px;
+	height: 27px;
+	cursor: pointer;
+	margin-bottom: 18px;
+}
+
+
+div.content table.discolor tr {
+	height: 60px;
+}
+div.content table.discolor td {
+	height: 60px;
+}

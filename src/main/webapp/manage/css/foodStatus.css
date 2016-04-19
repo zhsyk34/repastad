@@ -1,0 +1,134 @@
+.food {
+	position: relative;
+	width: 40px;
+	color: blue;
+	cursor: pointer;
+}
+
+td {
+	height: 40px;
+}
+
+.food img {
+	width: 150px;
+	height: 120px;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	z-index: 99;
+}
+
+td .linkbutton {
+	padding: 2px 5px;
+}
+
+/*dialog*/
+.dialog table {
+	width: 100%;
+}
+
+.dialog {
+	background: #FFF;
+}
+
+.edit {
+	padding: 2px 10px;
+	border: 1px solid #c9c9c9;
+	border-top: none;
+	border-bottom: none;
+}
+
+.edit th {
+	padding: 2px 5px;
+}
+
+.edit td {
+	padding: 2px 5px 2px 15px;
+}
+
+div.button {
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #c9c9c9;
+	border-top: none;
+}
+
+.button button {
+	margin-left: 12px;
+}
+
+.date {
+	width: 18px;
+	height: 16px;
+	margin: 0;
+}
+
+.beginTime,.endTime {
+	font-weight: 600;
+	color: red;
+	margin: 0 10px;
+}
+
+.yet {
+	color: red;
+	font-weight: 600;
+}
+
+.restore,.modify,.stop {
+	font-weight: 600;
+	padding: 2px 7px;
+	cursor: pointer;
+	letter-spacing: 5px;
+}
+
+.restore {
+	color: green;
+}
+
+.modify {
+	color: #551A8B;
+}
+
+.stop {
+	color: blue;
+}
+
+#left li {
+	margin-right: 8px;
+	font-size: 16px;
+}
+
+div.clear {
+	height: 10px;
+	clear: both;
+}
+
+div.operation {
+	height: 100px;
+}
+
+li label {
+	margin-right: 7px;
+}
+
+li .keyword {
+	width: 100px;
+	height: 22px;
+}
+
+#page {
+	padding: 10px 5px;
+}
+
+#page table{
+	float:right;
+}
+
+.del{
+	margin-left:10px;
+}
+
+th{
+	font-weight: 600;
+}
