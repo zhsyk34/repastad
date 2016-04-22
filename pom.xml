@@ -16,7 +16,7 @@
 		<hibernate.version>4.3.10.Final</hibernate.version>
 		<aop.aspectj.version>1.8.6</aop.aspectj.version>
 		<poi.version>3.13</poi.version>
-		<mysql.jdbc.version>5.0.4</mysql.jdbc.version>
+		<mysql.jdbc.version><!-- 5.0.4 -->5.1.38</mysql.jdbc.version>
 	</properties>
 
 	<dependencies>

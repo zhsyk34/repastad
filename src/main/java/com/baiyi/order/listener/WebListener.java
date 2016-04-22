@@ -2,6 +2,7 @@ package com.baiyi.order.listener;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -11,15 +12,16 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.baiyi.order.service.SystemConfigService;
+import com.baiyi.order.pojo.Admins;
+import com.baiyi.order.service.AdminsService;
 import com.baiyi.order.socket.ServerListener;
 import com.baiyi.order.util.BackupAutoAndClearDetectThread;
 import com.baiyi.order.util.BeanUtil;
 import com.baiyi.order.util.FileUtil;
 import com.baiyi.order.util.JDBCUtil;
+import com.baiyi.order.util.SHADigest;
 import com.baiyi.order.util.Utility;
 import com.baiyi.order.util.ValidateRunnable;
 import com.baiyi.order.util.languageReadUtil;
@@ -30,10 +32,9 @@ public class WebListener implements ServletContextListener {
 
 	private String path;
 
-	private SystemConfigService systemConfigService;
-
 	public void contextDestroyed(ServletContextEvent event) {
-		WebApplicationContext webApplicationContext = (WebApplicationContext) event.getServletContext().getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
+		// WebApplicationContext webApplicationContext = (WebApplicationContext)
+		// event.getServletContext().getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
 
 		try {
 			Thread.sleep(1000);
@@ -55,8 +56,8 @@ public class WebListener implements ServletContextListener {
 		BeanUtil.country = result[3];// location
 		context.setAttribute("projectTitle", result[7]);// title
 		// 讀取權限配置
-		Map<String, Integer> map = readOauth();
-		context.setAttribute("oauth", map);
+		// Map<String, Integer> map = readOauth();
+		// context.setAttribute("oauth", map);
 		// 讀取語言
 		languageReadUtil.readLanguage();// manage/language/zh-cn.xml...
 		// copyjsyunew3();
@@ -71,6 +72,19 @@ public class WebListener implements ServletContextListener {
 		// 定時刪除檢測記錄
 		BackupAutoAndClearDetectThread bdt = new BackupAutoAndClearDetectThread();
 		bdt.start();
+
+		//
+		AdminsService adminsService = (AdminsService) BeanUtil.ctx.getBean("adminsService");
+		Admins root = adminsService.findByName("root");
+		if (root == null) {
+			root = new Admins();
+			root.setUsername("root");
+			root.setPassword(SHADigest.encode("root"));
+			root.setAddtime(new Date());
+			root.setPageCount(10);
+
+			adminsService.save(root, null);
+		}
 	}
 
 	private void copyjsyunew3() {

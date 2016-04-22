@@ -48,7 +48,6 @@ public class ServerListener extends Thread {
 		// HH:mm:ss");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		TerminalService terminalService = (TerminalService) BeanUtil.ctx.getBean("terminalService");
-		System.out.println(terminalService);
 		List<Terminal> infoList = terminalService.findAll();
 		if (infoList != null && !infoList.isEmpty()) {
 			for (Terminal info : infoList) {

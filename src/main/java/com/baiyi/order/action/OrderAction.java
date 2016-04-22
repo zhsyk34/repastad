@@ -642,7 +642,6 @@ public class OrderAction extends BasicAction {
 
 	// 查询 明細
 	public String searchOrder() {
-		System.out.println(orderId);
 		try {
 			List<OrderInfo> orderList = null;
 			if (this.pageSize == 0) {

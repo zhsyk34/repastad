@@ -271,14 +271,12 @@ public class TasteAction extends ActionSupport {
 				}
 			}
 		}
-		// System.out.println(Arrays.asList(tasteTypeIdSet));
 
 		tasteTypeList = tasteTypeService.findList();
 		if (CollectionUtils.isNotEmpty(tasteTypeList)) {
 			for (TasteType tt : tasteTypeList) {
 				Integer tasteTypeId = tt.getId();
 				if (!tasteTypeIdSet.contains(tasteTypeId)) {
-					// System.out.println(tasteTypeId);
 					tasteTypeService.delete(tasteTypeId);
 				}
 			}

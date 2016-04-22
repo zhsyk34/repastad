@@ -51,7 +51,6 @@ public class CommonsDaoImpl<Entity> implements CommonsDao<Entity> {
 		hibernateTemplate.saveOrUpdate(entity);
 	}
 
-	@SuppressWarnings("unchecked")
 	public Entity find(Integer id) {
 		return (Entity) hibernateTemplate.get(entityClass, id);
 	}

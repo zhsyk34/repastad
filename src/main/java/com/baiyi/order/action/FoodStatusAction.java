@@ -44,7 +44,6 @@ public class FoodStatusAction extends ActionSupport {
 				case 1:
 					// 打折 促销
 					if (count < foodStatus.getSend()) {
-						System.out.println("count is too low");
 						continue;
 					}
 
@@ -67,7 +66,6 @@ public class FoodStatusAction extends ActionSupport {
 				case 2:
 					// 赠品
 					if (count < foodStatus.getSend()) {
-						System.out.println("count is too low");
 						continue;
 					}
 
@@ -88,7 +86,6 @@ public class FoodStatusAction extends ActionSupport {
 
 					if (count > 0) {
 						if (count < foodStatus.getSend()) {
-							System.out.println("count is too low");
 							continue;
 						}
 						foodStatus.setCount(count);

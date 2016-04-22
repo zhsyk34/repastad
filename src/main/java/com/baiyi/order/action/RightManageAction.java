@@ -534,7 +534,6 @@ public class RightManageAction extends BasicAction {
 		}
 		if (check) {
 			int r = adminsService.updatePassword(adminName, oldpassword, password);
-			System.out.println(r);
 		}
 		return SUCCESS;
 	}

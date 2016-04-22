@@ -149,7 +149,7 @@ public class ValidateRunnable implements Runnable {
 			flag = false;
 			e.printStackTrace();
 		}
-		flag = true;// TODO:测试
+		// flag = true;// TODO:测试
 		return flag;
 	}
 
